@@ -29,6 +29,7 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    border: 25px solid rgb(255, 220, 144); /* 边框样式 */
     background: transparent; /* 透明背景，显示body的背景图片 */
 }
 
