@@ -1,0 +1,121 @@
+/* 重置样式 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 定义CSS变量 */
+:root {
+    --header-height: 80px; /* 头部高度 */
+    --text-color: #000;    /* 文本颜色 */
+    --link-color: #007bff; /* 链接颜色 */
+}
+
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('/images/Tingyun.jpg'); /* 替换为实际背景图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Main 样式 */
+main {
+    margin-top: var(--header-height); /* 顶部外边距等于header高度 */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent; /* 透明背景，显示body的背景图片 */
+}
+
+/* 内容样式 */
+main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Footer 样式 */
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* 透明背景，显示body的背景图片 */
+}
+/* Header 基本样式 */
+header {
+    height: 60px; /* 根据需要调整高度 */
+    display: flex;
+    margin-top: 20px; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* 导航样式 */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+/* 链接样式 */
+header nav a {
+    text-decoration: none; /* 取消默认下划线 */
+    color: #333; /* 默认文字颜色，可根据需要调整 */
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative; /* 为伪元素提供定位上下文 */
+    transition: color 0.3s; /* 文字颜色过渡效果 */
+}
+
+header nav a:hover {
+    color: #007bff; /* 悬停时的文字颜色，可调整 */
+}
+
+/* 伪元素创建直角 */
+header nav a::before,
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 10px; /* 直角大小 */
+    height: 10px;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s; /* 透明度过渡效果 */
+}
+
+header nav a::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #007bff; /* 左上直角，颜色与悬停一致 */
+    border-left: 2px solid #007bff;
+}
+
+header nav a::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #007bff; /* 右下直角 */
+    border-right: 2px solid #007bff;
+}
+
+header nav a:hover::before,
+header nav a:hover::after {
+    opacity: 1; /* 悬停时显示直角 */
+}
