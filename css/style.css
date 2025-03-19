@@ -30,6 +30,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     background: transparent; /* 透明背景，显示body的背景图片 */
+    -webkit-text-fill-color: #ffffff;
 }
 
 /* 内容样式 */
@@ -50,6 +51,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #333; /* 透明背景，显示body的背景图片 */
+    -webkit-text-fill-color: #ffffff;
 }
 /* Header 基本样式 */
 header {
@@ -84,6 +86,7 @@ header nav a {
     padding: 5px 10px;
     position: relative; /* 为伪元素提供定位上下文 */
     transition: color 0.3s; /* 文字颜色过渡效果 */
+    
 }
 
 header nav a:hover {
@@ -118,4 +121,17 @@ header nav a::after {
 header nav a:hover::before,
 header nav a:hover::after {
     opacity: 1; /* 悬停时显示直角 */
+}
+.welcome {
+    margin-top: 100px; /* 调整顶部间距 */
+    text-align: center; /* 文字居中 */
+    color: #ffffff; /* 文字颜色 */ 
+}
+.welcome h1 {
+    font-size: 48px; /* 标题字体大小 */
+    margin-bottom: 20px; /* 底部外边距 */
+}
+.welcome p {
+    font-size: 24px; /* 段落字体大小 */
+    margin-bottom: 20px; /* 底部外边距 */ 
 }
