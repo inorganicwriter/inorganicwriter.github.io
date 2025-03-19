@@ -8,8 +8,8 @@
 /* 定义CSS变量 */
 :root {
     --header-height: 80px; /* 头部高度 */
-    --text-color: #000;    /* 文本颜色 */
-    --link-color: #007bff; /* 链接颜色 */
+    --text-color: #ffffff;    /* 文本颜色 */
+    --link-color: #ffd587; /* 链接颜色 */
 }
 
 /* 通用样式 */
@@ -29,7 +29,6 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    border: 25px solid rgb(255, 220, 144); /* 边框样式 */
     background: transparent; /* 透明背景，显示body的背景图片 */
 }
 
@@ -50,7 +49,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent; /* 透明背景，显示body的背景图片 */
+    background-color: #333; /* 透明背景，显示body的背景图片 */
 }
 /* Header 基本样式 */
 header {
@@ -80,7 +79,7 @@ header nav li {
 /* 链接样式 */
 header nav a {
     text-decoration: none; /* 取消默认下划线 */
-    color: #333; /* 默认文字颜色，可根据需要调整 */
+    color: #ffffff; /* 默认文字颜色，可根据需要调整 */
     font-weight: bold;
     padding: 5px 10px;
     position: relative; /* 为伪元素提供定位上下文 */
@@ -88,7 +87,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #007bff; /* 悬停时的文字颜色，可调整 */
+    color: #ffd587; /* 悬停时的文字颜色，可调整 */
 }
 
 /* 伪元素创建直角 */
@@ -105,15 +104,15 @@ header nav a::after {
 header nav a::before {
     top: 0;
     left: 0;
-    border-top: 2px solid #007bff; /* 左上直角，颜色与悬停一致 */
-    border-left: 2px solid #007bff;
+    border-top: 2px solid #ffd587; /* 左上直角，颜色与悬停一致 */
+    border-left: 2px solid #ffd587;
 }
 
 header nav a::after {
     bottom: 0;
     right: 0;
-    border-bottom: 2px solid #007bff; /* 右下直角 */
-    border-right: 2px solid #007bff;
+    border-bottom: 2px solid #ffd587; /* 右下直角 */
+    border-right: 2px solid #ffd587;
 }
 
 header nav a:hover::before,
