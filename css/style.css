@@ -19,6 +19,7 @@ footer {
 }
 footer p {
     margin: 0; 
+    font-family: "Times New Roman", Times, serif;
 }
 
 /* Header */
@@ -52,6 +53,7 @@ header nav a {
     padding: 8px 16px;
     position: relative; /* 为伪元素提供定位上下文 */
     transition: color 0.3s; /* 文字颜色过渡效果 */
+    font-family: "Times New Roman", Times, serif;
     
 }
 
