@@ -12,7 +12,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #232739;
-    -webkit-text-fill-color: #ffe7ae;
+    -webkit-text-fill-color: #fff1d1;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -45,7 +45,7 @@ header nav li {
 /* 链接样式 */
 header nav a {
     text-decoration: none; /* 取消默认下划线 */
-    color: #ffffff; /* 默认文字颜色，可根据需要调整 */
+    color: #ffffff; 
     font-weight: bold;
     padding: 5px 10px;
     position: relative; /* 为伪元素提供定位上下文 */
@@ -86,64 +86,49 @@ header nav a:hover::before,
 header nav a:hover::after {
     opacity: 1; /* 悬停时显示直角 */
 }
-
 /* 通用样式 */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: url('/images/Tingyun.jpg'); /* 替换为实际背景图片路径 */
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-/* Main 样式 */
+
 main {
-    margin-top: 100px; /* 调整顶部间距 */
     padding: 20px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: transparent; /* 透明背景，显示body的背景图片 */
-    -webkit-text-fill-color: #ffffff;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden; /* 防止滚动条出现在页面顶部 */
 }
 
-/* 内容样式 */
-main h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-main p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
+/* .welcome 部分，固定在屏幕上 */
 .welcome {
-    margin-top: 100px; /* 调整顶部间距 */
-    text-align: center; /* 文字居中 */
-    color: #ffffff; /* 文字颜色 */ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+    position: relative;
+    color: #ffffff; 
 }
+
+/* 标题样式 */
 .welcome h1 {
-    font-size: 48px; /* 标题字体大小 */
-    margin-bottom: 20px; /* 底部外边距 */
+    font-size: 36px;
+    margin-bottom: 20px;
 }
+
+/* 段落样式 */
 .welcome p {
-    font-size: 24px; /* 段落字体大小 */
-    margin-bottom: 20px; /* 底部外边距 */ 
+    font-size: 12px;
+    margin-bottom: 20px;
 }
-.lastest-posts {
-    justify-content: center; /* 主轴居中 */
-    display: flex; /* 水平排列 */
-    margin-top: 20px; /* 调整顶部间距 */
-    text-align: center; /* 文字居中 */
-    color: #ffffff; /* 文字颜色 */ 
-}
-
-.recent-papers {
-    display: flex; /* 水平排列 */
-    justify-content: center; /* 主轴居中 */
-    flex-wrap: wrap; /* 换行 */
-    gap: 20px; /* 间距 */
-    color: #ffffff; /* 文字颜色 */ 
-}
-
