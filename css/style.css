@@ -29,6 +29,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1000;
 }
 
 /* 导航样式 */
@@ -115,10 +116,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
     text-align: center;
     position: relative;
-    color: #ffffff; 
 }
 
 /* 标题样式 */
