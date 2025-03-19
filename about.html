@@ -2,50 +2,21 @@
 
 /* 容器样式 */
 .container {
-    background-color: white; /* 内层容器背景颜色 */
-    color: black; /* 内层容器文本颜色 */
+    background-color: rgba(193, 193, 193, 0.3); /* 内层容器背景颜色 */
+    color: rgb(255, 255, 255); /* 内层容器文本颜色 */
     border-radius: 8px; /* 圆角效果 */
     padding: 20px; /* 内边距 */
-
-    max-width: 1200px; /* 最大宽度 */
-    margin: 0 auto; /* 自动居中 */
-    margin-top: 60px;
+    max-width: 70%; /* 最大宽度 */
+    margin: auto; /* 自动居中 */
+    margin-top: 80px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 /* 标题样式 */
-h1, h2, h3 {
-    background-color: white; /* 标题背景颜色 */
-    color: black; /* 标题文字颜色 */
-    border-radius: 8px; /* 圆角效果 */
-    padding: 10px; /* 内边距 */
-    margin-top: 20px; /* 顶部外边距 */
-    margin-bottom: 10px; /* 底部外边距 */
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-}
-
-/* 单独设置每个标题的字体大小 */
 h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 1.875rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-/* 引用样式 */
-.blockquote {
-    line-height: 1.5; /* 行高 */
-    margin-bottom: 0.2em; /* 段落间距 */
-    padding: 10px; /* 内边距 */
-    background-color: white; /* 背景颜色 */
-    border-left: 4px solid #007bff; /* 左边框颜色 */
-    border-radius: 4px; /* 圆角效果 */
+    padding: 0px; /* 内边距 */
+    margin: 10px auto; /* 顶部外边距 */
+    font-size: 30px;
 }
 
 /* 分隔线样式 */
@@ -53,7 +24,7 @@ hr {
     border: 1px solid white;
     background: transparent;
     height: 1px;
-    margin: 20px 0; /* 上下外边距 */
+    margin: 15px 0; /* 上下外边距 */
 }
 
 
@@ -67,8 +38,11 @@ hr {
 .column {
     padding: 0;
     margin: 0;
+    margin-bottom: 5px; /* 段落间距 */
+    font-size: 16px;
+    padding: 5px; /* 内边距 */
+    border-bottom: 1px solid white;
 }
-
 /* 头像图片样式 */
 #profile-pic img {
     max-width: 100%;
@@ -77,7 +51,6 @@ hr {
 
 /* 个人信息样式 */
 #profile-info {
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,13 +59,11 @@ hr {
 
 .profile-info p {
     margin: 0;
-    line-height: 1.2;
+    line-height: 1;
     text-align: center;
-    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 30px;
 }
-
-
-
 
 </style>
 
@@ -131,51 +102,46 @@ hr {
                 <!-- Profile Section -->
                 <div class="column-list" id="profile">
                     <div class="column" id="profile-pic" style="width:40%; text-align: center;">
-                        <figure class="image">
-                            <a href="">
-                                <img src="" alt="" style="max-width: 100%; height: auto;"/>
+                        <figure>
+                            <a href="/images/avatar.jpg">
+                                <img src="/images/avatar.jpg" alt="User's avatar" style="max-width: 100%; height: auto;"/>
                             </a>
-                        </figure>
+                        </figure>                        
                     </div>
                     <div class="column" id="profile-info" style="width:55%;">
                         <figure class="profile-info">
-                            <p>
-                                <strong>HCOOH</strong><br>
-                                <small>Wiki & Wet Lab</small>
-                            </p>
+                            <p>HCOOH</br></p>
                         </figure>
-                        <blockquote class="bio">
-                            The Student of Peking University, majoring in Geographic Information Systems. <br/>
+                            The Student of School of Earth and Space Science, Peking University, majoring in Geographic Information Systems(GIS). Current research interests include machine learning and artificial intelligence, with a focus on natural language processing and computer vision.<br/>
                             The member of the Peking iGEM 2024, GPA team, mainly on the wiki part, also helped with the wet lab part.<br/>
                             Currently trying some interesting things, including but not limited to training diffusion models, writing, and making music with AI.<br/>
-                        </blockquote>
                     </div>
                 </div>
                 <!-- Education Section -->
-                <h3 id="education-title">Education</h3>
+                <h1 id="education-title">Education</h1>
                 <hr id="education-divider"/>
-                <blockquote id="undergrad-info" class="education-info">
+                <blockquote id="undergrad-info" >
                     <strong>Undergraduate Student</strong> | <strong>School of Earth and Space Science, Peking University</strong><br/>
                     2023 - Present<br/>
                     Studied at the School of Earth and Space Sciences, Peking University, majoring in Geographic Information Systems.Committed to achieve a BS in GIS.
                 </blockquote>
 
                 <!-- Achievement Section -->
-                <h3 id="achievement-title">Achievement</h3>
+                <h1 id="achievement-title">Achievement</h1>
                 <hr id="achievement-divider"/>
-                <blockquote id="igem-achievement" class="achievement-info">
+                <blockquote id="igem-achievement">
                     <strong>Gold Medal | </strong><strong>2024 iGEM Competition</strong><br/>
                     Participated in the 2024 iGEM Peking University competition, focused on the wiki part, and also helped with the wet lab part.
                 </blockquote>
 
                 <hr id="achievement-divider-2"/>
-                <blockquote id="ibo-achievement" class="achievement-info">
+                <blockquote id="ibo-achievement">
                     <strong>Gold Medal | </strong><strong>3th Synbio Challenge</strong><br/>
                     Participated in the 3rd Synbio Challenge, focused on the original painting and short film design parts of the project.
                 </blockquote>
 
                 <hr id="achievement-divider-3"/>
-                <blockquote id="scholarship-achievement" class="achievement-info">
+                <blockquote id="scholarship-achievement">
                     <strong>Administrator | </strong><strong>Peking University Forum on Baidu Tieba</strong><br/>
                     Served as the administrator of the Peking University Forum on Baidu Tieba, and organized many offline activities, with participants from Tsinghua University, Renmin University of China, University of Science and Technology of China and other universities.
                 </blockquote>
