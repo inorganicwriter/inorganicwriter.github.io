@@ -132,22 +132,3 @@ main p {
     font-size: 24px; /* 段落字体大小 */
     margin-bottom: 20px; /* 底部外边距 */ 
 }
-.lastest-posts {
-    margin-top: 20px; /* 调整顶部间距 */
-    text-align: center; /* 文字居中 */
-    color: #ffffff; /* 文字颜色 */ 
-}
-.lastest-posts h1 {
-    font-size: 48px; /* 标题字体大小 */
-    margin-bottom: 20px; /* 底部外边距 */ 
-}
-.lastest-posts p {
-    font-size: 24px; /* 段落字体大小 */
-    margin-bottom: 20px; /* 底部外边距 */ 
-}
-.recent-papers {
-    display: flex; /* 水平排列 */
-    justify-content: center; /* 主轴居中 */
-    flex-wrap: wrap; /* 换行 */
-    gap: 20px; /* 间距 */
-}
