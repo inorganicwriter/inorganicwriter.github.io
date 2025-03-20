@@ -8,7 +8,7 @@
         padding: 20px; /* 内边距 */
         width: 70%; /* 最大宽度 */
         margin: auto; /* 自动居中 */
-        margin-top: 137px;
+        margin-top: 210px;
         font-family: "Times New Roman", Times, serif;
     }
     
@@ -17,6 +17,7 @@
         padding: 0px; /* 内边距 */
         margin: 10px auto; /* 顶部外边距 */
         font-size: 30px;
+        
     }
     
     /* 分隔线样式 */
@@ -41,8 +42,16 @@
         font-size: 22px;
         padding: 10px; /* 内边距 */
         border-bottom: 1px solid white;
-        display: flex; 
+        display: flex; /* 使用flex布局 */
         align-items: center;
+    }
+    .column a {
+        color: white;
+        text-decoration: none; /* 去除下划线 */
+        transition: color 0.3s ease; /* 颜色过渡效果 */
+    }
+    .column a:hover {
+        color: #ffd587; /* 悬停时的文字颜色，可调整 */
     }
     .icon {
         width: 25px; /* 图标宽度 */
@@ -86,37 +95,30 @@
                  <!-- Contact Section -->
                 <h1 id="contact-title">Contact with me</h1>
                 <hr id="contact-divider"/>
-                <div class="column-list" id="contact-info" style="flex-wrap: wrap; gap: 1em;">
+                <div class="column-list" id="contact-info">
                         <div class="column" id="location">
                             <figure>
                                 <div>
-                                   <img class="icon" src="/images/icon/Location.svg" alt="Location Icon"/>
-                                </div>
-                                <div>Peking University, No.5 Yiheyuan Road Haidian District, Beijing, P.R. China 100871</div>
+                                   <img class="icon" src="/images/icon/Location.svg" alt="Location Icon"/> Peking University, No.5 Yiheyuan Road Haidian District, Beijing, P.R. China 100871</div>
     
                             </figure>
                         </div>
                         <div class="column" id="email">
                             <figure>
                                 <div>
-                                    <img class="icon" src="/images/icon/Email.svg" alt="Email Icon"/>
-                                </div>
-                                <div>inorganicwriter@gmail.com</div>
+                                    <img class="icon" src="/images/icon/Email.svg" alt="Email Icon"/> inorganicwriter@gmail.com</div>
                             </figure>
                         </div>
                         <div class="column" id="Github">
                             <figure>
                                 <div>
-                                    <img class="icon" src="/images/icon/Github.svg" alt="Github Icon"/>
-                                </div>
-                                <div><a href="https://github.com/inorganicwriter">inorganicwriter</a></div>
+                                    <img class="icon" src="/images/icon/Github.svg" alt="Github Icon"/> <a href="https://github.com/inorganicwriter">inorganicwriter</a></div>
                             </figure>
                         </div>
                         <div class="column" id="Twitter">
                             <figure>
                                 <div>
-                                    <img class="icon" src="/images/icon/X.svg" alt="Location Icon"/>
-                                <div><a href="https://x.com/inorganicwriter">@inorganicwriter</a></div>
+                                    <img class="icon" src="/images/icon/X.svg" alt="Location Icon"/> <a href="https://x.com/inorganicwriter">@inorganicwriter</a></div>
                             </figure>
                         </div>
                  </div>
