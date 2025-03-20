@@ -1,11 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact with me</title>
-</head>
-<body>
+<style>
+
+    /* 容器样式 */
+    .container {
+        background-color: rgba(193, 193, 193, 0.3); /* 内层容器背景颜色 */
+        color: rgb(255, 255, 255); /* 内层容器文本颜色 */
+        border-radius: 8px; /* 圆角效果 */
+        padding: 20px; /* 内边距 */
+        width: 70%; /* 最大宽度 */
+        margin: auto; /* 自动居中 */
+        margin-top: 137px;
+        font-family: "Times New Roman", Times, serif;
+    }
     
-</body>
-</html>
+    /* 标题样式 */
+    h1 {
+        padding: 0px; /* 内边距 */
+        margin: 10px auto; /* 顶部外边距 */
+        font-size: 30px;
+    }
+    
+    /* 分隔线样式 */
+    hr {
+        border: 1px solid white;
+        background: transparent;
+        height: 1px;
+        margin: 30px 0; /* 上下外边距 */
+    }
+    
+    
+    /* 列表样式 */
+    .column-list {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .column {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px; /* 段落间距 */
+        font-size: 22px;
+        padding: 10px; /* 内边距 */
+        border-bottom: 1px solid white;
+    }
+    
+    </style>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About me</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="paper.html">Paper</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <article>
+                 <!-- Contact Section -->
+                <h1 id="contact-title">Contact with me</h1>
+                <hr id="contact-divider"/>
+                <div class="column-list" id="contact-info" style="flex-wrap: wrap; gap: 1em;">
+                        <div class="column" id="location" style="flex: 1;">
+                            <figure class="callout" style="display: flex; align-items: center;">
+                                <div style="font-size:1.5em; padding-right: 5px;">
+                                   <img class="icon" src="/images/icon/Location.svg" alt="Location Icon"/>
+                                </div>
+                                <div>Beijing, China</div>
+                                <div>Peking University, No.5 Yiheyuan Road Haidian District, Beijing, P.R. China 100871</div>
+    
+                            </figure>
+                        </div>
+                        <div class="column" id="email" style="flex: 1;">
+                            <figure class="callout" style="align-items: center;">
+                                <div style="font-size:1.5em; padding-right: 5px;">
+                                    <img class="icon" src="/images/icon/Email.svg" alt="Email Icon"/>
+                                </div>
+                                <div>inorganicwriter@gmail.com</div>
+                            </figure>
+                        </div>
+                        <div class="column" id="Github" style="flex: 1;">
+                            <figure class="callout" style="align-items: center;">
+                                <div style="font-size:1.5em; padding-right: 5px;">
+                                    <img class="icon" src="/images/icon/Github.svg" alt="Github Icon"/>
+                                </div>
+                                <div><a href="https://github.com/inorganicwriter">inorganicwriter</a></div>
+                            </figure>
+                        </div>
+                        <div class="column" id="Twitter" style="flex: 1;">
+                            <figure class="callout" style="align-items: center;">
+                                <div style="font-size:1.5em; padding-right: 5px;">
+                                    <img class="icon" src="/images/icon/X.svg" alt="Location Icon"/>
+                                </div>
+                                <div><a href="https://x.com/inorganicwriter">@inorganicwriter</a></div>
+                            </figure>
+                        </div>
+                 </div>
+            </article>
+        </div>
+        <footer>
+            <p>&copy; 2025 inorganicwriter.github.io. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
