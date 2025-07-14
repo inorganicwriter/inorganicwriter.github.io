@@ -1,132 +1,283 @@
-<style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系HCOOH - 北京大学学生，欢迎学术交流与合作">
+    <meta name="keywords" content="HCOOH, 联系方式, 北京大学, 学术交流, 合作">
+    <meta name="author" content="HCOOH">
+    
+    <title>联系我 - HCOOH's Blog</title>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="css/modern-style.css" as="style">
+    <link rel="preload" href="js/modern-script.js" as="script">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 滚动进度条 -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
 
-    /* 容器样式 */
-    .container {
-        background-color: rgba(193, 193, 193, 0.5); /* 内层容器背景颜色 */
-        color: #ffffff; /* 内层容器文本颜色 */
-        border-radius: 8px; /* 圆角效果 */
-        padding: 20px; /* 内边距 */
-        width: 70%; /* 最大宽度 */
-        margin: auto; /* 自动居中 */
-        margin-top: 210px;
-        font-family: "Times New Roman", Times, serif;
-    }
-    
-    /* 标题样式 */
-    h1 {
-        padding: 0px; /* 内边距 */
-        margin: 10px auto; /* 顶部外边距 */
-        font-size: 30px;
-        
-    }
-    
-    /* 分隔线样式 */
-    hr {
-        border: 1px solid white;
-        background: transparent;
-        height: 1px;
-        margin: 30px 0; /* 上下外边距 */
-    }
-    
-    
-    /* 列表样式 */
-    .column-list {
-        justify-content: space-between;
-        align-items: flex-start;
-
-    }
-    
-    .column {
-        padding: 0;
-        margin: 0;
-        margin-bottom: 10px; /* 段落间距 */
-        font-size: 24px;
-        padding: 20px; /* 内边距 */
-        border-bottom: 1px solid white;
-        display: flex; /* 使用flex布局 */
-        align-items: center;
-    }
-    .column a {
-        color: #ffffff;
-        text-decoration: none; /* 去除下划线 */
-        transition: color 0.3s ease; /* 颜色过渡效果 */
-    }
-    .column a:hover {
-        color: #232739; /* 悬停时的文字颜色，可调整 */
-    }
-    .icon {
-        width: 30px; /* 图标宽度 */
-        height: 30px; /* 图标高度 */
-        margin-right: 10px; /* 图标与文本之间的间距 */
-    }
-    
-    </style>
-    
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About me</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About me</a>
-                        </li>
-                        <li>
-                            <a href="paper.html">Paper</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <div class="container">
-            <article>
-                 <!-- Contact Section -->
-                <h1 id="contact-title">Contact with me</h1>
-                <hr id="contact-divider"/>
-                <div class="column-list" id="contact-info">
-                        <div class="column" id="location">
-                            <figure>
-                                <div>
-                                   <img class="icon" src="/images/icon/Location.svg" alt="Location Icon"/> Peking University, No.5 Yiheyuan Road Haidian District, Beijing, P.R. China 100871</div>
-    
-                            </figure>
-                        </div>
-                        <div class="column" id="email">
-                            <figure>
-                                <div>
-                                    <img class="icon" src="/images/icon/Email.svg" alt="Email Icon"/> <a href="mailto:">inorganicwriter@gmail.com</a></div>
-                            </figure>
-                        </div>
-                        <div class="column" id="Github">
-                            <figure>
-                                <div>
-                                    <img class="icon" src="/images/icon/Github.svg" alt="Github Icon"/> <a href="https://github.com/inorganicwriter">inorganicwriter</a></div>
-                            </figure>
-                        </div>
-                        <div class="column" id="Twitter">
-                            <figure>
-                                <div>
-                                    <img class="icon" src="/images/icon/X.svg" alt="Location Icon"/> <a href="https://x.com/inorganicwriter">@inorganicwriter</a></div>
-                            </figure>
-                        </div>
-                 </div>
-            </article>
+    <!-- 现代化导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">HCOOH</a>
+            
+            <ul class="navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="paper.html">作品</a></li>
+                <li><a href="contact.html" class="active">联系</a></li>
+            </ul>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="navbar-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <footer>
-            <p>&copy; 2025 inorganicwriter.github.io. All rights reserved.</p>
-        </footer>
-    </body>
-    </html>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 联系信息区域 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">联系我</h1>
+                    <p class="section-subtitle">欢迎学术交流与合作，让我们一起探索技术的无限可能</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="images/icon/Location.svg" alt="位置图标">
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="font-semibold">地址</h3>
+                            <p>北京大学，海淀区颐和园路5号<br>北京市，中国 100871</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="images/icon/Email.svg" alt="邮箱图标">
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="font-semibold">邮箱</h3>
+                            <p>
+                                <a href="mailto:inorganicwriter@gmail.com" onclick="modernUtils.copyToClipboard('inorganicwriter@gmail.com')">
+                                    inorganicwriter@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="images/icon/Github.svg" alt="GitHub图标">
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="font-semibold">GitHub</h3>
+                            <p>
+                                <a href="https://github.com/inorganicwriter" target="_blank" rel="noopener noreferrer">
+                                    @inorganicwriter
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="images/icon/X.svg" alt="X(Twitter)图标">
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="font-semibold">X (Twitter)</h3>
+                            <p>
+                                <a href="https://x.com/inorganicwriter" target="_blank" rel="noopener noreferrer">
+                                    @inorganicwriter
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 合作领域 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">合作领域</h2>
+                    <p class="section-subtitle">我感兴趣的合作方向和研究领域</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🤖</div>
+                        <h3 class="card-title text-center">人工智能研究</h3>
+                        <p>机器学习、深度学习、自然语言处理、计算机视觉等AI相关领域的研究与应用。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🌍</div>
+                        <h3 class="card-title text-center">GIS技术应用</h3>
+                        <p>地理信息系统、空间数据分析、遥感技术、地理可视化等GIS相关项目。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🧬</div>
+                        <h3 class="card-title text-center">合成生物学</h3>
+                        <p>生物工程、合成生物学、生物信息学等跨学科研究项目。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">💻</div>
+                        <h3 class="card-title text-center">开源项目</h3>
+                        <p>参与或发起有意义的开源项目，推动技术社区的发展。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">📝</div>
+                        <h3 class="card-title text-center">学术写作</h3>
+                        <p>技术博客、学术论文、技术文档等各种形式的学术写作合作。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🎓</div>
+                        <h3 class="card-title text-center">教育培训</h3>
+                        <p>技术分享、工作坊、在线课程等教育培训相关的合作机会。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式说明 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">如何联系我</h2>
+                    <p class="section-subtitle">选择最适合的联系方式</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-4">📧 学术交流</h3>
+                        <p class="mb-4">如果您想进行学术讨论、研究合作或技术交流，请通过邮箱联系我：</p>
+                        <div style="background: var(--background-secondary); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <code style="color: var(--primary-color); font-weight: 600;">inorganicwriter@gmail.com</code>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            请在邮件主题中简要说明您的来意，我会尽快回复。
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-4">💬 社交媒体</h3>
+                        <p class="mb-4">想要了解我的最新动态或进行轻松的交流，可以通过社交媒体联系：</p>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                            <a href="https://github.com/inorganicwriter" target="_blank" rel="noopener noreferrer" 
+                               style="color: var(--primary-color); text-decoration: none; font-weight: 500;">
+                                🔗 GitHub: @inorganicwriter
+                            </a>
+                            <a href="https://x.com/inorganicwriter" target="_blank" rel="noopener noreferrer"
+                               style="color: var(--primary-color); text-decoration: none; font-weight: 500;">
+                                🔗 X (Twitter): @inorganicwriter
+                            </a>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            在GitHub上可以查看我的项目代码，在X上可以看到我的技术思考。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                    <p class="section-subtitle">一些您可能想了解的问题</p>
+                </div>
+                
+                <div class="grid grid-1">
+                    <div class="card">
+                        <h3 class="card-title mb-3">❓ 我可以和您讨论什么话题？</h3>
+                        <p>我很乐意讨论机器学习、人工智能、地理信息系统、合成生物学、编程技术、学术研究等相关话题。无论是技术问题、学习心得还是项目合作，都欢迎交流。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-3">⏰ 您通常多久回复邮件？</h3>
+                        <p>我通常会在24-48小时内回复邮件。如果是紧急事项，请在邮件主题中标注"紧急"。由于学业繁忙，有时可能会稍有延迟，请谅解。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-3">🤝 您接受什么类型的合作？</h3>
+                        <p>我对学术研究、开源项目、技术分享、教育培训等各种形式的合作都很感兴趣。特别欢迎跨学科的合作项目，这能带来更多创新的可能性。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-3">📍 可以线下见面吗？</h3>
+                        <p>如果您在北京地区，我们可以安排线下见面交流。我经常参加北京地区的技术聚会和学术活动，也很乐意组织或参与相关的交流活动。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行动号召 -->
+        <section class="section">
+            <div class="container text-center">
+                <div class="section-header">
+                    <h2 class="section-title">让我们开始对话</h2>
+                    <p class="section-subtitle">无论是学术讨论还是技术交流，我都期待与您的对话</p>
+                </div>
+                
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <div class="card" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)); color: white; border: none;">
+                        <h3 style="color: white; margin-bottom: 1rem;">准备好开始了吗？</h3>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">
+                            发送邮件到 <strong>inorganicwriter@gmail.com</strong>，或者通过社交媒体联系我。
+                            让我们一起探索技术的无限可能！
+                        </p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="mailto:inorganicwriter@gmail.com" class="btn" 
+                               style="background: white; color: var(--primary-color); border: none;">
+                                📧 发送邮件
+                            </a>
+                            <a href="https://github.com/inorganicwriter" target="_blank" rel="noopener noreferrer" 
+                               class="btn" style="background: transparent; color: white; border: 2px solid white;">
+                                🔗 访问GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 现代化页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HCOOH. 保留所有权利。</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.875rem;">
+                使用现代Web技术构建 | 
+                <a href="https://github.com/inorganicwriter" style="color: inherit; text-decoration: underline;">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/modern-script.js"></script>
+</body>
+</html>

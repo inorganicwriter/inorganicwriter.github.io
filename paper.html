@@ -1,39 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Written by me</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="HCOOH的作品集 - 展示我的项目、研究成果和创作作品">
+    <meta name="keywords" content="HCOOH, 作品集, 项目, 研究, iGEM, AI, GIS">
+    <meta name="author" content="HCOOH">
+    
+    <title>我的作品 - HCOOH's Blog</title>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="css/modern-style.css" as="style">
+    <link rel="preload" href="js/modern-script.js" as="script">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="paper.html">Paper</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
+    <!-- 滚动进度条 -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <!-- 现代化导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">HCOOH</a>
+            
+            <ul class="navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="paper.html" class="active">作品</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="navbar-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 作品集介绍 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">我的作品</h1>
+                    <p class="section-subtitle">探索、学习、创造 - 记录我的技术之路</p>
+                </div>
+                
+                <div class="card" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)); color: white; border: none; text-align: center;">
+                    <h2 style="color: white; margin-bottom: 1rem;">🚀 持续更新中</h2>
+                    <p style="opacity: 0.9; margin-bottom: 1.5rem;">
+                        这里将展示我在学习和研究过程中完成的各种项目和作品。
+                        从学术研究到技术实践，从开源贡献到创意项目，记录我的成长历程。
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 1rem; font-size: 0.9rem;">
+                            🧬 合成生物学
+                        </span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 1rem; font-size: 0.9rem;">
+                            🤖 人工智能
+                        </span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 1rem; font-size: 0.9rem;">
+                            🌍 GIS应用
+                        </span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 1rem; font-size: 0.9rem;">
+                            💻 Web开发
+                        </span>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
-    
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2025 inorganicwriter.github.io. All rights reserved.</p>
+        </section>
+
+        <!-- 重点项目 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">重点项目</h2>
+                    <p class="section-subtitle">我参与的主要研究项目和获奖作品</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">🏆</div>
+                                <div>
+                                    <h3 class="card-title">iGEM 2024 金奖项目</h3>
+                                    <p class="card-subtitle">北京大学 | 2024年</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">
+                            作为北京大学iGEM 2024团队的核心成员，主要负责项目wiki网站的设计与开发工作，
+                            同时参与湿实验室的相关研究。项目专注于合成生物学领域的创新应用。
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">我的贡献：</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">• Wiki网站架构设计与前端开发</li>
+                                <li style="margin-bottom: 0.5rem;">• 项目文档整理与可视化展示</li>
+                                <li style="margin-bottom: 0.5rem;">• 湿实验室协助与数据分析</li>
+                                <li style="margin-bottom: 0.5rem;">• 团队协作与项目管理</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">HTML/CSS</span>
+                            <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">JavaScript</span>
+                            <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">生物实验</span>
+                            <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">数据分析</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div style="font-size: 2.5rem;">🥇</div>
+                                <div>
+                                    <h3 class="card-title">第三届合成生物学挑战赛</h3>
+                                    <p class="card-subtitle">金奖获得者 | 2024年</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">
+                            参与第三届合成生物学挑战赛，主要负责项目的视觉设计和创意表达部分。
+                            通过原创绘画和短片制作，为科学项目增添了艺术价值。
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">创作内容：</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">• 项目概念原创插画设计</li>
+                                <li style="margin-bottom: 0.5rem;">• 科普短片脚本与制作</li>
+                                <li style="margin-bottom: 0.5rem;">• 视觉识别系统设计</li>
+                                <li style="margin-bottom: 0.5rem;">• 多媒体内容整合</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">平面设计</span>
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">视频制作</span>
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">创意表达</span>
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">科学传播</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术项目 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">技术项目</h2>
+                    <p class="section-subtitle">我的编程实践和技术探索</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🌐</div>
+                        <h3 class="card-title text-center">现代化个人网站</h3>
+                        <p class="mb-4">
+                            使用现代Web技术重构个人网站，采用响应式设计和现代化UI/UX理念，
+                            提供优秀的用户体验。
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">HTML5</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">CSS3</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🤖</div>
+                        <h3 class="card-title text-center">AI创作实验</h3>
+                        <p class="mb-4">
+                            探索AI在创作领域的应用，包括扩散模型训练、AI写作和AI音乐制作等
+                            前沿技术的实践与研究。
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Python</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">PyTorch</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Diffusion</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🗺️</div>
+                        <h3 class="card-title text-center">GIS数据分析</h3>
+                        <p class="mb-4">
+                            结合专业背景，开发地理信息系统相关的数据分析工具和可视化应用，
+                            探索空间数据的价值。
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">ArcGIS</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">QGIS</span>
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学术贡献 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">学术贡献</h2>
+                    <p class="section-subtitle">我的研究成果和学术活动</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">📝 iGEM项目文档与Wiki开发</div>
+                        <div class="timeline-date">2024年</div>
+                        <p>
+                            负责iGEM项目的完整文档编写和Wiki网站开发，包括项目背景、实验设计、
+                            结果分析等内容的整理和可视化展示。通过清晰的文档和直观的网站设计，
+                            有效传达了项目的科学价值和创新点。
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">🎨 科学可视化与设计</div>
+                        <div class="timeline-date">2024年</div>
+                        <p>
+                            在合成生物学挑战赛中，通过原创插画和短片制作，将复杂的科学概念
+                            转化为易于理解的视觉内容。这种跨学科的方法有效提升了科学传播的效果，
+                            获得了评委和观众的一致好评。
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">🌐 社区建设与管理</div>
+                        <div class="timeline-date">长期进行</div>
+                        <p>
+                            作为北京大学百度贴吧管理员，积极组织线下学术交流活动，促进不同高校
+                            学生之间的交流与合作。通过社区平台，为学术讨论和知识分享提供了
+                            重要的交流空间。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能展示 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">技术能力</h2>
+                    <p class="section-subtitle">我在各个领域的技术水平</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-4">💻 编程开发</h3>
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>Python</span>
+                                <span style="color: var(--text-secondary);">高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--primary-color); height: 100%; width: 85%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>JavaScript</span>
+                                <span style="color: var(--text-secondary);">中高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--primary-color); height: 100%; width: 75%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>HTML/CSS</span>
+                                <span style="color: var(--text-secondary);">高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--primary-color); height: 100%; width: 80%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>R</span>
+                                <span style="color: var(--text-secondary);">中级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--primary-color); height: 100%; width: 65%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-4">🔬 专业技能</h3>
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>GIS分析</span>
+                                <span style="color: var(--text-secondary);">高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--accent-color); height: 100%; width: 85%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>机器学习</span>
+                                <span style="color: var(--text-secondary);">中高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--accent-color); height: 100%; width: 75%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>数据分析</span>
+                                <span style="color: var(--text-secondary);">高级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--accent-color); height: 100%; width: 80%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span>生物实验</span>
+                                <span style="color: var(--text-secondary);">中级</span>
+                            </div>
+                            <div style="background: var(--border-color); height: 8px; border-radius: 4px;">
+                                <div style="background: var(--accent-color); height: 100%; width: 60%; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 未来计划 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">未来计划</h2>
+                    <p class="section-subtitle">我正在进行和计划开展的项目</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🚀</div>
+                        <h3 class="card-title text-center">深度学习研究</h3>
+                        <p>
+                            计划深入研究计算机视觉和自然语言处理领域，
+                            探索更先进的深度学习模型和应用场景。
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🌍</div>
+                        <h3 class="card-title text-center">GIS创新应用</h3>
+                        <p>
+                            结合AI技术开发智能化的GIS应用，
+                            探索空间数据分析的新方法和新工具。
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">📚</div>
+                        <h3 class="card-title text-center">开源贡献</h3>
+                        <p>
+                            计划参与更多开源项目，分享技术成果，
+                            为开源社区的发展贡献自己的力量。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 现代化页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HCOOH. 保留所有权利。</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.875rem;">
+                使用现代Web技术构建 | 
+                <a href="https://github.com/inorganicwriter" style="color: inherit; text-decoration: underline;">GitHub</a>
+            </p>
         </div>
     </footer>
-    
+
+    <!-- JavaScript -->
+    <script src="js/modern-script.js"></script>
 </body>
 </html>

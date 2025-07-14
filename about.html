@@ -1,155 +1,239 @@
-<style>
-
-/* 容器样式 */
-.container {
-    background-color: rgba(193, 193, 193, 0.5); /* 内层容器背景颜色 */
-    color:#ffffff; /* 内层容器文本颜色 */
-    border-radius: 8px; /* 圆角效果 */
-    padding: 20px; /* 内边距 */
-    width: 70%; /* 最大宽度 */
-    margin: auto; /* 自动居中 */
-    margin-top: 70px;
-    font-family: "Times New Roman", Times, serif;
-}
-
-/* 标题样式 */
-h1 {
-    padding: 0px; /* 内边距 */
-    margin: 10px auto; /* 顶部外边距 */
-    font-size: 30px;
-}
-
-/* 分隔线样式 */
-hr {
-    border: 1px solid white;
-    background: transparent;
-    height: 1px;
-    margin: 15px 0; /* 上下外边距 */
-}
-
-
-/* 列表样式 */
-.column-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.column {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px; /* 段落间距 */
-    font-size: 16px;
-    padding: 5px; /* 内边距 */
-    border-bottom: 1px solid white;
-}
-/* 头像图片样式 */
-#profile-pic img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 个人信息样式 */
-#profile-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* 将内容水平居中 */
-}
-
-.profile-info p {
-    margin: 0;
-    line-height: 1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-</style>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="关于HCOOH - 北京大学地球与空间科学学院学生，iGEM 2024金奖获得者">
+    <meta name="keywords" content="HCOOH, 关于我, 北京大学, GIS, iGEM, 个人简介">
+    <meta name="author" content="HCOOH">
+    
+    <title>关于我 - HCOOH's Blog</title>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="css/modern-style.css" as="style">
+    <link rel="preload" href="js/modern-script.js" as="script">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="paper.html">Paper</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <article>
-            <div>
-                <!-- Profile Section -->
-                <div class="column-list" id="profile">
-                    <div id="profile-pic" style="width:40%; text-align: center;">
-                        <figure>
-                            <a href="/images/avatar.jpg">
-                                <img src="/images/avatar.jpg" alt="User's avatar" style="width: 58%; height: auto; border-radius: 8px;"/>
-                            </a>
-                        </figure>                        
+    <!-- 滚动进度条 -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <!-- 现代化导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">HCOOH</a>
+            
+            <ul class="navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html" class="active">关于我</a></li>
+                <li><a href="paper.html">作品</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="navbar-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 个人简介区域 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">关于我</h1>
+                    <p class="section-subtitle">探索者 · 学习者 · 创造者</p>
+                </div>
+                
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="images/avatar.jpg" alt="HCOOH的头像" loading="lazy">
                     </div>
-                    <div class="column" id="profile-info" style="width:55%;">
-                        <figure class="profile-info">
-                            <p>HCOOH</br></p>
-                        </figure>
-                            The Student of School of Earth and Space Science, Peking University, majoring in Geographic Information Systems(GIS). Current research interests include machine learning and artificial intelligence, with a focus on natural language processing and computer vision.<br/>
-                            The member of the Peking iGEM 2024, GPA team, mainly on the wiki part, also helped with the wet lab part.<br/>
-                            Currently trying some interesting things, including but not limited to training diffusion models, writing, and making music with AI.<br/>
+                    
+                    <div class="profile-info">
+                        <h2>HCOOH</h2>
+                        <p>我是北京大学地球与空间科学学院的学生，主修地理信息系统(GIS)。我对机器学习和人工智能充满热情，特别专注于自然语言处理和计算机视觉领域的研究。</p>
+                        
+                        <p>作为北京大学iGEM 2024团队的成员，我主要负责wiki部分的开发工作，同时也参与了湿实验室的相关工作。我们的团队最终获得了金奖的荣誉。</p>
+                        
+                        <p>目前，我正在尝试一些有趣的项目，包括训练扩散模型、AI写作和AI音乐制作。我相信技术的力量能够改变世界，也希望通过自己的努力为这个目标贡献一份力量。</p>
                     </div>
                 </div>
-                <!-- Education Section -->
-                <h1 id="education-title">Education</h1>
-                <hr id="education-divider"/>
-                <blockquote id="undergrad-info" >
-                    <strong>Undergraduate Student</strong> | <strong>School of Earth and Space Science, Peking University</strong><br/>
-                    2023 - Present<br/>
-                    Studied at the School of Earth and Space Sciences, Peking University, majoring in Geographic Information Systems.Committed to achieve a BS in GIS.
-                </blockquote>
-
-                <!-- Achievement Section -->
-                <h1 id="achievement-title">Achievement</h1>
-                <hr id="achievement-divider"/>
-                <blockquote id="igem-achievement">
-                    <strong>Gold Medal | </strong><strong>2024 iGEM Competition</strong><br/>
-                    Participated in the 2024 iGEM Peking University competition, focused on the wiki part, and also helped with the wet lab part.
-                </blockquote>
-
-                <hr id="achievement-divider-2"/>
-                <blockquote id="ibo-achievement">
-                    <strong>Gold Medal | </strong><strong>3th Synbio Challenge</strong><br/>
-                    Participated in the 3rd Synbio Challenge, focused on the original painting and short film design parts of the project.
-                </blockquote>
-
-                <hr id="achievement-divider-3"/>
-                <blockquote id="scholarship-achievement">
-                    <strong>Administrator | </strong><strong>Peking University Forum on Baidu Tieba</strong><br/>
-                    Served as the administrator of the Peking University Forum on Baidu Tieba, and organized many offline activities, with participants from Tsinghua University, Renmin University of China, University of Science and Technology of China and other universities.
-                </blockquote>
             </div>
-        </article>
-    </div>
-    <footer>
-        <p>&copy; 2025 inorganicwriter.github.io. All rights reserved.</p>
+        </section>
+
+        <!-- 教育背景 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">教育背景</h2>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">北京大学地球与空间科学学院</h3>
+                        <p class="card-subtitle">本科生 | 地理信息系统专业 | 2023年至今</p>
+                    </div>
+                    <p>在北京大学地球与空间科学学院攻读地理信息系统学士学位。专注于GIS技术的学习与应用，致力于空间数据分析与可视化技术的研究。通过系统的学习，掌握了空间分析、遥感技术、数据库管理等核心技能。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成就与荣誉 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">成就与荣誉</h2>
+                    <p class="section-subtitle">记录我的成长足迹</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">🏆 iGEM 2024 金奖</div>
+                        <div class="timeline-date">2024年11月</div>
+                        <p>作为北京大学iGEM 2024团队成员，主要负责wiki部分的开发工作，同时协助湿实验室的相关研究。团队项目专注于合成生物学领域的创新应用，最终在国际竞赛中获得金奖荣誉。</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">🥇 第三届合成生物学挑战赛金奖</div>
+                        <div class="timeline-date">2024年</div>
+                        <p>参与第三届合成生物学挑战赛，主要负责项目的原创绘画和短片设计部分。通过创意设计和视觉表达，为项目增添了独特的艺术价值，最终获得金奖认可。</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-title">👨‍💼 北京大学百度贴吧管理员</div>
+                        <div class="timeline-date">长期担任</div>
+                        <p>担任北京大学百度贴吧的管理员职务，负责社区管理和活动组织工作。成功组织了多次线下交流活动，参与者来自清华大学、中国人民大学、中国科学技术大学等多所知名高校，促进了校际间的学术交流与合作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能与兴趣 -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">技能与兴趣</h2>
+                    <p class="section-subtitle">我的专业技能和个人爱好</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-6">🔧 专业技能</h3>
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">编程语言</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                                <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">Python</span>
+                                <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">JavaScript</span>
+                                <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">HTML/CSS</span>
+                                <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">R</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">专业工具</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                                <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">ArcGIS</span>
+                                <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">QGIS</span>
+                                <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">TensorFlow</span>
+                                <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem;">PyTorch</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-2">研究领域</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">• 机器学习与深度学习</li>
+                                <li style="margin-bottom: 0.5rem;">• 自然语言处理</li>
+                                <li style="margin-bottom: 0.5rem;">• 计算机视觉</li>
+                                <li style="margin-bottom: 0.5rem;">• 地理信息系统</li>
+                                <li style="margin-bottom: 0.5rem;">• 合成生物学</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title mb-6">🎨 兴趣爱好</h3>
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">AI创作</h4>
+                            <p style="margin-bottom: 1rem; color: var(--text-secondary);">正在探索使用AI技术进行创作，包括训练扩散模型、AI写作和AI音乐制作等前沿应用。</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">技术写作</h4>
+                            <p style="margin-bottom: 1rem; color: var(--text-secondary);">喜欢分享技术心得和学习经验，通过写作来整理思路和帮助他人。</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">社区活动</h4>
+                            <p style="margin-bottom: 1rem; color: var(--text-secondary);">热衷于组织和参与各种学术交流活动，促进不同高校间的合作与交流。</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-2">持续学习</h4>
+                            <p style="color: var(--text-secondary);">保持对新技术的好奇心，不断学习和探索前沿科技领域的发展。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 个人理念 -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">个人理念</h2>
+                    <p class="section-subtitle">我的价值观和人生态度</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                        <h3 class="card-title">持续创新</h3>
+                        <p>相信技术的力量能够改变世界，始终保持对新技术的好奇心和探索精神。</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+                        <h3 class="card-title">协作共赢</h3>
+                        <p>重视团队合作，相信通过协作能够创造出更大的价值和影响力。</p>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+                        <h3 class="card-title">终身学习</h3>
+                        <p>保持学习的热情，不断充实自己，在快速变化的时代中保持竞争力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 现代化页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HCOOH. 保留所有权利。</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.875rem;">
+                使用现代Web技术构建 | 
+                <a href="https://github.com/inorganicwriter" style="color: inherit; text-decoration: underline;">GitHub</a>
+            </p>
+        </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="js/modern-script.js"></script>
 </body>
 </html>
