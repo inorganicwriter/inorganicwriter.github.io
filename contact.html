@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - inorganicwriter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About me</a>
+                    </li>
+                    <li>
+                        <a href="paper.html">Paper</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container contact-container">
+        <article>
+             <!-- Contact Section -->
+            <h1 id="contact-title"><span class="lang-en">Contact</span><span class="lang-zh" style="display:none;">联系方式</span></h1>
+            <hr id="contact-divider"/>
+            <div id="contact-info">
+                <div class="column" id="location">
+                    <img class="icon" src="images/icon/Location.svg" alt="Location Icon"/> 
+                    <span class="lang-en">Peking University, No.5 Yiheyuan Road Haidian District, Beijing, P.R. China 100871</span>
+                    <span class="lang-zh" style="display:none;">中国北京市海淀区颐和园路5号 北京大学 100871</span>
+                </div>
+                <div class="column" id="email">
+                    <img class="icon" src="images/icon/Email.svg" alt="Email Icon"/> 
+                    <a href="mailto:inorganicwriter@gmail.com">inorganicwriter@gmail.com</a>
+                </div>
+                <div class="column" id="Github">
+                    <img class="icon" src="images/icon/Github.svg" alt="Github Icon"/> 
+                    <a href="https://github.com/inorganicwriter" target="_blank">inorganicwriter</a>
+                </div>
+                <div class="column" id="Twitter">
+                    <img class="icon" src="images/icon/X.svg" alt="X Icon"/> 
+                    <a href="https://x.com/inorganicwriter" target="_blank">@inorganicwriter</a>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>&copy; 2025 inorganicwriter.github.io. All rights reserved.</p>
+    </footer>
+
+    <!-- 加载JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script>
+        let currentLang = 'en';
+        
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('.lang-en');
+            const zhElements = document.querySelectorAll('.lang-zh');
+            
+            if (currentLang === 'en') {
+                enElements.forEach(el => el.style.display = 'none');
+                zhElements.forEach(el => el.style.display = 'inline');
+                currentLang = 'zh';
+            } else {
+                enElements.forEach(el => el.style.display = 'inline');
+                zhElements.forEach(el => el.style.display = 'none');
+                currentLang = 'en';
+            }
+        }
+        
+        // Sync with about.html language state if coming from there
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('lang') === 'zh') {
+                toggleLanguage();
+            }
+        });
+    </script>
+</body>
+</html>

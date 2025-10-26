@@ -1,0 +1,146 @@
+/* 重置样式 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #232739;
+    -webkit-text-fill-color: #fff1d1;
+    width: 100%;
+    margin-top: auto;
+}
+footer p {
+    margin: 0; 
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Header */
+header {
+    padding: 0 20px;
+    background: transparent;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* 导航样式 */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin: 30px; /* 调整间距 */
+    display: inline;
+}
+
+/* 链接样式 */
+header nav a {
+    text-decoration: none; /* 取消默认下划线 */
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 16px;
+    position: relative; /* 为伪元素提供定位上下文 */
+    transition: color 0.3s; /* 文字颜色过渡效果 */
+    font-family: "Times New Roman", Times, serif;
+}
+
+header nav a:hover {
+    color: #ffd587; /* 悬停时的文字颜色，可调整 */
+}
+
+/* 伪元素创建直角 */
+header nav a::before,
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 10px; /* 直角大小 */
+    height: 10px;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s; /* 透明度过渡效果 */
+}
+
+header nav a::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #ffd587; /* 左上直角，颜色与悬停一致 */
+    border-left: 2px solid #ffd587;
+}
+
+header nav a::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #ffd587; /* 右下直角 */
+    border-right: 2px solid #ffd587;
+}
+
+header nav a:hover::before,
+header nav a:hover::after {
+    opacity: 1; /* 悬停时显示直角 */
+}
+
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/Tingyun.jpg'); /* 替换为实际背景图片路径 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 背景遮罩层增强 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 21vw;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 标题样式 */
+main h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 段落样式 */
+main p {
+    font-size: 24px;
+    margin-bottom: 100px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}

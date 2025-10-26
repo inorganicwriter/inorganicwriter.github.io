@@ -1,0 +1,242 @@
+/* ==================== 通用页面样式 ==================== */
+
+/* 容器样式 */
+.container {
+    background-color: rgba(193, 193, 193, 0.5);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    margin: 70px auto 80px auto;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* 标题样式 */
+.container h1 {
+    padding: 0px;
+    margin: 10px auto;
+    font-size: 30px;
+}
+
+/* 分隔线样式 */
+.container hr {
+    border: 1px solid white;
+    background: transparent;
+    height: 1px;
+    margin: 15px 0;
+}
+
+/* 列表样式 */
+.column-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column {
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+}
+
+/* ==================== About 页面特定样式 ==================== */
+
+/* 头像图片样式 */
+#profile-pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 个人信息样式 */
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info p {
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Education 和 Achievement 区块样式 */
+.container blockquote {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-left: 3px solid #ffd587;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== Contact 页面特定样式 ==================== */
+
+/* Contact 页面容器调整 */
+.contact-container {
+    margin-top: 210px;
+    margin-bottom: 80px;
+}
+
+/* Contact 页面分隔线 */
+.contact-container hr {
+    margin: 30px 0;
+}
+
+/* Contact 页面列表项 */
+.contact-container .column {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-container .column:last-child {
+    border-bottom: none;
+}
+
+.contact-container .column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-container .column a:hover {
+    color: #ffd587;
+}
+
+/* 图标样式 */
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* 将图标变为白色 */
+}
+
+/* ==================== Paper 页面样式 ==================== */
+
+/* Paper 页面容器 */
+.paper-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    min-height: 60vh;
+}
+
+/* Paper 卡片样式 */
+.paper-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ffd587;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 213, 135, 0.3);
+}
+
+.paper-card h3 {
+    color: #ffd587;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.paper-card .paper-meta {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.paper-card .paper-description {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.paper-card .paper-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #ffd587;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.paper-card .paper-links a:hover {
+    color: #ffffff;
+}
+
+/* 空状态样式 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #cccccc;
+}
+
+.empty-state h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffd587;
+}
+
+.empty-state p {
+    font-size: 18px;
+}
+
+/* ==================== 响应式设计 ==================== */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 100px;
+        padding: 15px;
+    }
+    
+    .column-list {
+        flex-direction: column;
+    }
+    
+    #profile-pic,
+    #profile-info {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    .contact-container .column {
+        font-size: 18px;
+        padding: 15px;
+    }
+    
+    .paper-card h3 {
+        font-size: 18px;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header nav li {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 24px;
+    }
+    
+    .profile-info p {
+        font-size: 24px;
+    }
+    
+    .contact-container .column {
+        font-size: 16px;
+    }
+}
