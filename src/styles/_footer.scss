@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color-footer;
+    -webkit-text-fill-color: $text-color-footer;
+    width: 100%;
+    margin-top: auto;
+
+    p {
+        margin: 0;
+        font-family: $font-family-serif;
+    }
+}

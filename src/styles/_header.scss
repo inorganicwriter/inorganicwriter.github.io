@@ -1,0 +1,68 @@
+@use 'variables' as *;
+
+header {
+    padding: 0 20px;
+    background: transparent;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin: 30px;
+            display: inline;
+        }
+
+        a {
+            text-decoration: none;
+            color: $text-color-light;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 8px 16px;
+            position: relative;
+            transition: color 0.3s;
+            font-family: $font-family-serif;
+
+            &:hover {
+                color: $accent-color;
+            }
+
+            // Pseudo-elements for corners
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+                border-top: 2px solid $accent-color;
+                border-left: 2px solid $accent-color;
+            }
+
+            &::after {
+                bottom: 0;
+                right: 0;
+                border-bottom: 2px solid $accent-color;
+                border-right: 2px solid $accent-color;
+            }
+
+            &:hover::before,
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+}
