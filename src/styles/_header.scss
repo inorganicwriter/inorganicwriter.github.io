@@ -2,66 +2,74 @@
 
 header {
     padding: 0 20px;
-    background: transparent;
+    background-color: $bg-color;
     position: fixed;
-    top: 0%;
+    top: 0;
+    left: 0;
     right: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    border-bottom: 1px solid $border-color;
+    transition: box-shadow 0.3s ease;
+
+    &.scrolled {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
 
     nav {
+        max-width: $content-wide-width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
         ul {
             list-style: none;
             display: flex;
+            margin: 0;
+            padding: 0;
         }
 
         li {
-            margin: 30px;
+            margin: 0;
             display: inline;
         }
 
         a {
             text-decoration: none;
-            color: $text-color-light;
-            font-weight: bold;
-            font-size: 20px;
-            padding: 8px 16px;
+            color: $text-color-secondary;
+            font-weight: 400;
+            font-size: 15px;
+            padding: 16px 20px;
+            display: inline-block;
             position: relative;
-            transition: color 0.3s;
-            font-family: $font-family-serif;
+            transition: color 0.2s ease;
+            font-family: $font-family-sans;
+            letter-spacing: 0.3px;
 
             &:hover {
-                color: $accent-color;
+                color: $text-color-primary;
             }
 
-            // Pseudo-elements for corners
-            &::before,
-            &::after {
-                content: '';
+            &.active {
+                color: $text-color-primary;
+                font-weight: 600;
+            }
+
+            // Precise underline - will be enhanced by pretext
+            .nav-underline {
                 position: absolute;
-                width: 10px;
-                height: 10px;
-                opacity: 0;
-                transition: opacity 0.3s;
+                bottom: 12px;
+                left: 20px;
+                height: 1px;
+                background-color: $accent-color;
+                width: 0;
+                transition: width 0.3s ease;
             }
 
-            &::before {
-                top: 0;
-                left: 0;
-                border-top: 2px solid $accent-color;
-                border-left: 2px solid $accent-color;
-            }
-
-            &::after {
-                bottom: 0;
-                right: 0;
-                border-bottom: 2px solid $accent-color;
-                border-right: 2px solid $accent-color;
-            }
-
-            &:hover::before,
-            &:hover::after {
-                opacity: 1;
+            &:hover .nav-underline,
+            &.active .nav-underline {
+                // Width will be set dynamically by pretext
+                width: var(--text-width, 100%);
             }
         }
     }

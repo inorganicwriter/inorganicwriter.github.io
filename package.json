@@ -12,6 +12,7 @@
     "vite": "^6.0.3"
   },
   "dependencies": {
+    "@chenglou/pretext": "^0.0.4",
     "@fortawesome/fontawesome-free": "^6.7.1"
   }
 }

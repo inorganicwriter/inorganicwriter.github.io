@@ -1,10 +1,24 @@
+// ==================== Academic Style Variables ====================
+
 // Colors
-$bg-color-footer: #232739;
-$text-color-footer: #fff1d1;
-$text-color-light: #ffffff;
-$accent-color: #ffd587;
-$bg-overlay: rgba(0, 0, 0, 0.3);
+$bg-color: #ffffff;
+$bg-color-alt: #fafafa;
+$bg-color-footer: #f0f0f0;
+$text-color-primary: #1a1a1a;
+$text-color-secondary: #555555;
+$text-color-footer: #333333;
+$accent-color: #8B0000;
+$link-color: #1a5276;
+$link-hover-color: #0d3652;
+$border-color: #dddddd;
+$border-color-light: #eeeeee;
+$blockquote-bg: #f8f8f8;
 
 // Fonts
-$font-family-serif: "Times New Roman", Times, serif;
-$font-family-sans: Arial, sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", Times, serif;
+$font-family-sans: "Helvetica Neue", Arial, sans-serif;
+$font-family-mono: "Courier New", Courier, monospace;
+
+// Layout
+$content-max-width: 800px;
+$content-wide-width: 900px;

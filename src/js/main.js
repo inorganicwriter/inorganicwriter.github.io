@@ -1,30 +1,32 @@
-import { initScrollAnimations, initTypingEffect, initCardAnimations, initPageTransitions } from './modules/animations.js';
-import { initParticleBackground } from './modules/particles.js';
+import { initScrollAnimations, initPageTransitions } from './modules/animations.js';
 import { initSmoothScroll, initNavbarEffects, initMobileMenu, createBackToTop } from './modules/navigation.js';
-import { initCursorEffect } from './modules/cursor.js';
+import { initHeroTypewriter, initPaperTitleUnderlines, initNavUnderlines, initSmartTextContainer } from './modules/text-effects.js';
 import { initLazyLoading } from './modules/utils.js';
 
-// Import Styles (Optional, if we want JS to drive CSS loading, but we used <link> in HTML)
-// import '../styles/main.scss'; 
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Page Fade In
+    // Page fade in
     document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.6s ease-in';
+    document.body.style.transition = 'opacity 0.4s ease-in';
     setTimeout(() => {
         document.body.style.opacity = '1';
-    }, 100);
+    }, 50);
 
-    // Initialization
-    initScrollAnimations();
-    initParticleBackground();
-    initTypingEffect();
+    // Core navigation
     initSmoothScroll();
     initNavbarEffects();
-    initCardAnimations();
-    initCursorEffect();
     initMobileMenu();
-    initLazyLoading();
     createBackToTop();
+
+    // Pretext-powered effects
+    initNavUnderlines();
+    initHeroTypewriter();
+    initPaperTitleUnderlines();
+    initSmartTextContainer();
+
+    // Animations
+    initScrollAnimations();
     initPageTransitions();
+
+    // Utils
+    initLazyLoading();
 });

@@ -9,56 +9,120 @@
 
 // Body & Layout
 body {
-    font-family: $font-family-sans;
-    line-height: 1.6;
-    background-image: url('/images/Tingyun.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    font-family: $font-family-serif;
+    line-height: 1.7;
+    background-color: $bg-color;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
     position: relative;
-    color: $text-color-light;
+    color: $text-color-primary;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $bg-overlay;
-    z-index: -1;
-    pointer-events: none;
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $link-hover-color;
+    }
 }
 
+// Main (Homepage hero)
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    top: 21vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    max-width: $content-max-width;
+    margin: 120px auto 80px auto;
+    padding: 0 20px;
     font-family: $font-family-serif;
 
+    .hero-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .hero-avatar {
+        width: 180px;
+        min-width: 180px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .hero-info {
+        flex: 1;
+    }
+
     h1 {
-        font-size: 48px;
-        margin-bottom: 40px;
-        color: $text-color-light;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 32px;
+        margin-bottom: 8px;
+        color: $text-color-primary;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        color: $text-color-secondary;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    .hero-links {
+        font-size: 14px;
+        color: $text-color-secondary;
+
+        a {
+            margin-right: 16px;
+        }
     }
 
     p {
-        font-size: 24px;
-        margin-bottom: 100px;
-        color: $text-color-light;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: $text-color-primary;
+        line-height: 1.7;
     }
+
+    // Typewriter cursor
+    .typewriter-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background-color: $text-color-primary;
+        margin-left: 2px;
+        animation: cursorBlink 1s step-end infinite;
+        vertical-align: text-bottom;
+    }
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+// Selection
+::selection {
+    background-color: rgba(139, 0, 0, 0.15);
+    color: $text-color-primary;
 }
 
 // Imports
