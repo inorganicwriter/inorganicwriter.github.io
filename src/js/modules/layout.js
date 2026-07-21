@@ -31,12 +31,6 @@ export function renderLayout() {
         inner.appendChild(ul);
         nav.appendChild(inner);
 
-        const toggle = document.createElement('button');
-        toggle.id = 'lang-toggle';
-        toggle.className = 'lang-toggle';
-        toggle.type = 'button';
-        nav.appendChild(toggle);
-
         header.appendChild(nav);
     }
 

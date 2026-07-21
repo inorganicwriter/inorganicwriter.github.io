@@ -1,6 +1,6 @@
 import { renderLayout } from './modules/layout.js';
 import { initScrollAnimations, initPageTransitions } from './modules/animations.js';
-import { initSmoothScroll, initNavbarEffects, initMobileMenu, createBackToTop, initLanguageToggle } from './modules/navigation.js';
+import { initSmoothScroll, initNavbarEffects, initMobileMenu, createBackToTop } from './modules/navigation.js';
 import { initHeroTypewriter, initNavUnderlines } from './modules/text-effects.js';
 import { loadContent } from './modules/markdown-loader.js';
 
@@ -13,18 +13,18 @@ function applyPageEffects() {
     initScrollAnimations();
 }
 
-async function renderPage(lang) {
+async function renderPage() {
     const container = document.getElementById('content');
     if (!container) return;
 
     container.innerHTML = '<div class="content-loading">Loading…</div>';
     try {
-        const meta = await loadContent(container, page, lang);
+        const meta = await loadContent(container, page);
         if (meta && meta.title) document.title = meta.title;
         applyPageEffects();
     } catch (err) {
         console.error('[content] failed to render page', err);
-        container.innerHTML = '<p class="markdown-error">内容加载失败：' + page + '.' + lang + '.md</p>';
+        container.innerHTML = '<p class="markdown-error">内容加载失败：' + page + '.md</p>';
     }
 }
 
@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createBackToTop();
     initNavUnderlines();
 
-    // Load the page content for the stored language, then enable toggling
-    const lang = localStorage.getItem('site-lang') || 'en';
-    renderPage(lang).then(() => initPageTransitions());
-    initLanguageToggle(renderPage);
+    // Load the page content, then wire page transitions
+    renderPage().then(() => initPageTransitions());
 });

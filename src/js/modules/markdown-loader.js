@@ -29,11 +29,11 @@ export function parseFrontmatter(raw) {
     return { data, content };
 }
 
-// Fetch a content Markdown file (content/{page}.{lang}.md), strip its
+// Fetch a content Markdown file (content/{page}.md), strip its
 // frontmatter, render the body with marked, and inject it into `container`.
 // Returns the parsed frontmatter so the caller can set the document title etc.
-export async function loadContent(container, page, lang) {
-    const file = page + '.' + lang + '.md';
+export async function loadContent(container, page) {
+    const file = page + '.md';
     const url = new URL('content/' + file, document.baseURI).href;
 
     const res = await fetch(url);
@@ -46,5 +46,5 @@ export async function loadContent(container, page, lang) {
     container.classList.add('markdown-body', 'markdown-ready');
     if (data.layout) container.dataset.layout = data.layout;
 
-    return { title: data.title || null, layout: data.layout || null, lang };
+    return { title: data.title || null, layout: data.layout || null };
 }

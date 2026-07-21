@@ -86,27 +86,4 @@ export function createBackToTop() {
     });
 }
 
-// Language toggle: switches between the per-language content files and asks the
-// caller (main.js) to re-render the page content. The button itself lives in
-// the header rendered by layout.js.
-export function initLanguageToggle(onLangChange) {
-    const btn = document.getElementById('lang-toggle');
-    if (!btn) return;
 
-    let lang = localStorage.getItem('site-lang') || 'en';
-
-    function applyLang(next, rerender) {
-        lang = next;
-        btn.textContent = lang === 'en' ? '中文' : 'EN';
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-        localStorage.setItem('site-lang', lang);
-        if (rerender && typeof onLangChange === 'function') {
-            onLangChange(lang);
-        }
-    }
-
-    btn.addEventListener('click', () => applyLang(lang === 'en' ? 'zh' : 'en'));
-    // Initial state: set the button label without re-rendering (content is
-    // already loaded by main.js using the stored language).
-    applyLang(lang, false);
-}
