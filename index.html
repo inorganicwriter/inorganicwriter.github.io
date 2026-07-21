@@ -1,68 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirun Li - Peking University</title>
-    <link rel="stylesheet" href="/src/styles/main.scss">
-    <script type="module" src="/src/js/page-loader.js"></script>
+    <link rel="stylesheet" href="./src/styles/main.scss">
+    <script type="module" src="./src/js/page-loader.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="paper.html">Publications</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="hero-section">
-            <div class="hero-avatar">
-                <img src="images/Sirun_Li.jpg" alt="Sirun Li" />
-            </div>
-            <div class="hero-info">
-                <h1 id="hero-name">Sirun Li</h1>
-                <div style="font-size: 13px; color: #999; margin-bottom: 8px; font-family: 'Courier New', monospace;">
-                    aka inorganicwriter</div>
-                <div class="hero-subtitle" id="hero-subtitle">
-                    Undergraduate student at Peking University, majoring in Geographic Information Science (GIS) with a
-                    double degree in Economics. Passionate about GeoAI, open source, and interdisciplinary innovation.
-                </div>
-                <div class="hero-links">
-                    <a href="mailto:inorganicwriter@gmail.com">Email</a>
-                    <a href="https://github.com/inorganicwriter" target="_blank">GitHub</a>
-                    <a href="https://scholar.google.com/citations?user=bWZazE4AAAAJ&hl=zh-CN" target="_blank">Google
-                        Scholar</a>
-                    <a href="https://x.com/inorganicwriter" target="_blank">X / Twitter</a>
-                </div>
-            </div>
-        </div>
-
-        <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0; width: 100%;" />
-
-        <section style="width: 100%;">
-            <h2 style="font-size: 20px; margin-bottom: 12px;">News</h2>
-            <ul style="padding-left: 20px; font-size: 15px; line-height: 1.8;">
-                <li><strong>2026.03</strong> &mdash; Paper accepted at CVPR 2026 Findings: "Unified Urban Tuning"</li>
-                <li><strong>2025</strong> &mdash; Paper accepted at NeurIPS 2025: "SuperGPQA"</li>
-                <li><strong>2024</strong> &mdash; iGEM Grand Jamboree: Global Gold Medal</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Sirun Li. All rights reserved.</p>
-    </footer>
-
-    <script type="module" src="/src/js/main.js"></script>
+<body data-page="home">
+    <header id="site-header"></header>
+    <main id="content" class="markdown-body"></main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>

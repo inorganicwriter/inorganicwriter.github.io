@@ -13,7 +13,7 @@ export function initScrollAnimations() {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.container, .paper-card, blockquote, .hero-section');
+    const animatedElements = document.querySelectorAll('#content > blockquote, #content > h2, #content > h3, #content > ul, #content[data-layout="contact"] > p');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(16px)';

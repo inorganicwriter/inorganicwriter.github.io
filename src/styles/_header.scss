@@ -73,4 +73,22 @@ header {
             }
         }
     }
+
+    .lang-toggle {
+        margin-left: 16px;
+        padding: 6px 12px;
+        font-family: $font-family-sans;
+        font-size: 13px;
+        color: $text-color-secondary;
+        background: transparent;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: color 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+            color: $text-color-primary;
+            border-color: $text-color-secondary;
+        }
+    }
 }

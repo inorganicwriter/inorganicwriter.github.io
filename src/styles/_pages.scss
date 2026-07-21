@@ -1,341 +1,197 @@
-/* ==================== Common Page Styles ==================== */
+/* ==================== Page styles driven by Markdown primitives ====================
+   Content files are pure Markdown; layout is selected via #content[data-layout]
+   (set at runtime from each file's frontmatter) and styled on native elements. */
 
-.container {
-    background-color: transparent;
-    color: $text-color-primary;
-    border-radius: 0;
-    padding: 0 20px;
-    max-width: $content-max-width;
-    width: 100%;
-    margin: 100px auto 80px auto;
-    font-family: $font-family-serif;
+/* ---------- Homepage hero (image floats left, text wraps right) ---------- */
+#content[data-layout="home"] > p:first-child img {
+    float: left;
+    width: 180px;
+    max-width: 180px;
+    height: auto;
+    margin: 0 40px 16px 0;
 }
 
-.container h1 {
-    padding: 0;
-    margin: 24px 0 8px 0;
-    font-size: 24px;
+#content[data-layout="home"] h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+#content[data-layout="home"] h1 + p {
+    font-size: 13px;
+    color: #999;
+    font-family: $font-family-mono;
+    margin-bottom: 8px;
+}
+
+#content[data-layout="home"] h1 + p + p {
+    font-size: 16px;
+    color: $text-color-secondary;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+#content[data-layout="home"] h1 + p + p + p {
+    font-size: 14px;
+    color: $text-color-secondary;
+
+    a {
+        margin-right: 16px;
+    }
+}
+
+#content[data-layout="home"] h2,
+#content[data-layout="home"] hr {
+    clear: both;
+}
+
+/* ---------- About page ---------- */
+#content[data-layout="profile"] > p:first-child img {
+    float: left;
+    width: 180px;
+    max-width: 180px;
+    height: auto;
+    margin: 0 30px 16px 0;
+}
+
+#content[data-layout="profile"] h3:first-of-type {
+    font-size: 26px;
     font-weight: 700;
-    color: $text-color-primary;
+    margin: 0 0 8px;
     letter-spacing: -0.3px;
 }
 
-.container h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px 0 8px 0;
-    color: $text-color-primary;
+#content[data-layout="profile"] h1 {
+    clear: both;
 }
 
-.container hr {
-    border: none;
-    border-top: 1px solid $border-color;
-    background: transparent;
-    height: 0;
-    margin: 12px 0;
-}
-
-/* List layout */
-.column-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-}
-
-.column {
-    padding: 0;
+/* ---------- Paper page ---------- */
+#content[data-layout="papers"] h3 {
+    display: block;
+    position: relative;
     margin: 0;
-    margin-bottom: 0;
-    font-size: 15px;
-    border-bottom: none;
-    line-height: 1.7;
-}
-
-/* ==================== About Page ==================== */
-
-#profile-pic img {
-    max-width: 100%;
-    height: auto;
-}
-
-#profile-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-bottom: none;
-}
-
-.profile-info p {
-    margin: 0;
-    line-height: 1.2;
-    text-align: left;
-    font-weight: 700;
-    font-size: 26px;
-    color: $text-color-primary;
-}
-
-.container blockquote {
-    margin: 8px 0;
-    padding: 10px 16px;
-    border-left: 3px solid $accent-color;
-    background-color: $blockquote-bg;
-    border-radius: 0;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.container blockquote strong {
-    color: $text-color-primary;
-}
-
-/* ==================== Contact Page ==================== */
-
-.contact-container {
-    margin-top: 120px;
-    margin-bottom: 80px;
-}
-
-.contact-container hr {
-    margin: 20px 0;
-}
-
-.contact-container .column {
-    margin-bottom: 8px;
-    font-size: 15px;
-    padding: 12px 0;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $border-color-light;
-}
-
-.contact-container .column:last-child {
-    border-bottom: none;
-}
-
-.contact-container .column a {
-    color: $link-color;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.contact-container .column a:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 12px;
-    opacity: 0.5;
-    filter: none;
-}
-
-/* ==================== Paper Page ==================== */
-
-.paper-container {
-    margin-top: 100px;
-    margin-bottom: 80px;
-    min-height: 60vh;
-}
-
-.paper-card {
-    background-color: transparent;
-    border-radius: 0;
     padding: 16px 0;
-    margin-bottom: 0;
-    border-left: none;
     border-bottom: 1px solid $border-color-light;
-    transition: none;
-}
-
-.paper-card:last-of-type {
-    border-bottom: none;
-}
-
-.paper-card:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.paper-card h3 {
-    color: $text-color-primary;
-    margin-bottom: 4px;
     font-size: 17px;
     font-weight: 600;
     line-height: 1.4;
-    position: relative;
 }
 
-/* Precise underline for paper titles - enhanced by pretext */
-.paper-card h3 .title-underline {
+#content[data-layout="papers"] > h3:first-of-type {
+    padding-top: 0;
+}
+
+#content[data-layout="papers"] > h3:last-of-type {
+    border-bottom: none;
+}
+
+/* Precise underline on hover (pure CSS, no markup needed) */
+#content[data-layout="papers"] h3::after {
+    content: '';
     position: absolute;
-    bottom: -2px;
     left: 0;
+    bottom: -1px;
     height: 1px;
-    background-color: $accent-color;
     width: 0;
+    background-color: $accent-color;
     transition: width 0.4s ease;
 }
 
-.paper-card:hover h3 .title-underline {
-    width: var(--title-width, 100%);
+#content[data-layout="papers"] h3:hover::after {
+    width: 100%;
 }
 
-.paper-card .paper-meta {
-    color: $text-color-secondary;
+/* meta line: the italic paragraph immediately after a title */
+#content[data-layout="papers"] h3 + p {
     font-size: 13px;
-    margin-bottom: 6px;
-    font-family: $font-family-sans;
-}
-
-.paper-card .paper-meta .tag {
-    display: inline-block;
-    padding: 1px 6px;
-    border: 1px solid $border-color;
-    font-size: 12px;
-    margin-right: 6px;
     color: $text-color-secondary;
+    font-family: $font-family-sans;
+    font-style: normal;
+    margin: 8px 0 6px;
 }
 
-.paper-card .paper-description {
+#content[data-layout="papers"] h3 + p + p {
     line-height: 1.6;
     margin-bottom: 8px;
     font-size: 14px;
     color: $text-color-secondary;
 }
 
-.paper-card .paper-links a {
-    display: inline-block;
-    margin-right: 12px;
-    color: $link-color;
-    text-decoration: none;
-    font-weight: 400;
+#content[data-layout="papers"] h3 + p + p + p {
     font-size: 13px;
     font-family: $font-family-sans;
-    transition: color 0.2s ease;
-}
 
-.paper-card .paper-links a:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-}
+    a {
+        display: inline-block;
+        margin-right: 12px;
+        color: $link-color;
+        text-decoration: none;
 
-/* Empty state */
-.empty-state {
-    text-align: left;
-    padding: 30px 0;
-    color: $text-color-secondary;
-}
-
-.empty-state h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: $text-color-primary;
-}
-
-.empty-state p {
-    font-size: 15px;
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+    }
 }
 
 /* Research interests */
-.research-interests {
+#content[data-layout="papers"] h2:last-of-type {
     margin-top: 30px;
-    padding: 20px 0;
+    padding-top: 20px;
     border-top: 1px solid $border-color;
-}
-
-.research-interests h2 {
-    color: $text-color-primary;
-    margin-bottom: 12px;
     font-size: 20px;
 }
 
-.research-interests ul {
-    text-align: left;
-    line-height: 1.8;
-    color: $text-color-primary;
-    padding-left: 20px;
+/* ---------- Contact page ---------- */
+#content[data-layout="contact"] > p {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid $border-color-light;
     font-size: 15px;
 }
 
-.research-interests li {
-    margin-bottom: 4px;
+#content[data-layout="contact"] > p:last-child {
+    border-bottom: none;
+}
+
+#content[data-layout="contact"] img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    opacity: 0.5;
+    flex-shrink: 0;
 }
 
 /* ==================== Responsive ==================== */
-
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        margin-top: 80px;
-        padding: 0 16px;
+    #content[data-layout="home"] > p:first-child img,
+    #content[data-layout="profile"] > p:first-child img {
+        float: none;
+        display: block;
+        width: 140px;
+        margin: 0 auto 16px;
     }
 
-    .column-list {
-        flex-direction: column;
-        gap: 16px;
+    #content[data-layout="home"] h1 {
+        font-size: 26px;
     }
 
-    #profile-pic,
-    #profile-info {
-        width: 100% !important;
+    #content[data-layout="profile"] h3:first-of-type {
+        font-size: 22px;
     }
 
-    #profile-pic {
-        text-align: center;
-        margin-bottom: 16px;
-    }
-
-    .contact-container .column {
-        font-size: 14px;
-        padding: 10px 0;
-    }
-
-    .paper-card h3 {
+    #content[data-layout="papers"] h3 {
         font-size: 16px;
     }
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav li {
-        margin: 0;
-    }
-
-    main {
-        margin-top: 80px;
-
-        .hero-section {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-avatar {
-            width: 140px;
-            min-width: 140px;
-        }
-
-        h1 {
-            font-size: 26px;
-        }
+    #content[data-layout="contact"] > p {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .container h1 {
-        font-size: 20px;
-    }
-
-    .profile-info p {
-        font-size: 22px;
-    }
-
-    .contact-container .column {
+    #content[data-layout="contact"] > p {
         font-size: 13px;
     }
 }

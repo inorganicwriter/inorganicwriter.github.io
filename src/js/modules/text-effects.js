@@ -1,11 +1,17 @@
 import { prepare, layout } from '@chenglou/pretext';
 
 /**
- * 1. Hero Typewriter Effect - Homepage title typing animation
+ * 1. Hero Typewriter Effect - Homepage name + subtitle typing animation.
+ *    Targets the pure-Markdown hero: the first <h1> is the name and the
+ *    paragraph two steps after it (image p, name h1, aka p, subtitle p) is
+ *    the subtitle. No HTML classes required.
  */
 export function initHeroTypewriter() {
-    const nameEl = document.getElementById('hero-name');
-    const subtitleEl = document.getElementById('hero-subtitle');
+    const home = document.querySelector('#content[data-layout="home"]');
+    if (!home) return;
+
+    const nameEl = home.querySelector('h1');
+    const subtitleEl = home.querySelector('h1 + p + p');
     if (!nameEl || !subtitleEl) return;
 
     const nameText = nameEl.textContent;
@@ -61,41 +67,7 @@ export function initHeroTypewriter() {
 }
 
 /**
- * 2. Paper Title Hover Underline - Precise width using pretext
- */
-export function initPaperTitleUnderlines() {
-    const paperCards = document.querySelectorAll('.paper-card');
-    if (!paperCards.length) return;
-
-    paperCards.forEach(card => {
-        const h3 = card.querySelector('h3');
-        if (!h3) return;
-
-        const titleText = h3.textContent.trim();
-
-        // Use pretext to measure the text width
-        try {
-            const font = window.getComputedStyle(h3).font || '17px Georgia';
-            const prepared = prepare(titleText, font);
-            const containerWidth = h3.offsetWidth;
-            const result = layout(prepared, containerWidth, 24);
-
-            // Store measured info for CSS
-            h3.style.setProperty('--title-width', containerWidth + 'px');
-        } catch (e) {
-            // Fallback: just use 100%
-            h3.style.setProperty('--title-width', '100%');
-        }
-
-        // Add underline element
-        const underline = document.createElement('span');
-        underline.className = 'title-underline';
-        h3.appendChild(underline);
-    });
-}
-
-/**
- * 3. Nav Underline - Precise text width measurement
+ * 2. Nav Underline - width measured via pretext
  */
 export function initNavUnderlines() {
     const navLinks = document.querySelectorAll('header nav a');
@@ -111,19 +83,16 @@ export function initNavUnderlines() {
 
         try {
             const font = window.getComputedStyle(link).font || '15px "Helvetica Neue"';
-            const prepared = prepare(text, font);
-            // For single-line nav text, measure at a very wide width
-            const result = layout(prepared, 500, 20);
-
-            // Use canvas to get precise single-line width
+            const prepared = prepare(text, { font });
+            const result = layout(prepared, 1000, 20);
+            if (typeof result.width !== 'number') throw new Error('pretext: no width');
+            link.style.setProperty('--text-width', result.width + 'px');
+        } catch (e) {
+            // Fallback: canvas text measurement
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
-            ctx.font = font;
-            const measured = ctx.measureText(text);
-            link.style.setProperty('--text-width', measured.width + 'px');
-        } catch (e) {
-            // Fallback
-            link.style.setProperty('--text-width', 'calc(100% - 40px)');
+            ctx.font = window.getComputedStyle(link).font || '15px "Helvetica Neue"';
+            link.style.setProperty('--text-width', ctx.measureText(text).width + 'px');
         }
     });
 
@@ -134,38 +103,4 @@ export function initNavUnderlines() {
             link.classList.add('active');
         }
     });
-}
-
-/**
- * 4. Smart Text Container - Smooth height transitions for language switch
- */
-export function initSmartTextContainer() {
-    const enText = document.getElementById('profile-text-en');
-    const zhText = document.getElementById('profile-text-zh');
-    if (!enText || !zhText) return;
-
-    const container = enText.parentElement;
-    if (!container) return;
-
-    // Pre-measure both text heights using pretext
-    try {
-        const font = window.getComputedStyle(enText).font || '15px Georgia';
-        const containerWidth = container.offsetWidth;
-
-        const enPrepared = prepare(enText.textContent.trim(), font);
-        const zhPrepared = prepare(zhText.textContent.trim(), font);
-
-        const enResult = layout(enPrepared, containerWidth, 24);
-        const zhResult = layout(zhPrepared, containerWidth, 24);
-
-        // Store heights for smooth transitions
-        container.dataset.enHeight = enResult.height;
-        container.dataset.zhHeight = zhResult.height;
-    } catch (e) {
-        // Pretext measurement failed, will use natural height
-    }
-
-    // Add smooth transition to container
-    container.style.transition = 'height 0.3s ease';
-    container.style.overflow = 'hidden';
 }

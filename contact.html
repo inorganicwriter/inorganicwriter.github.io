@@ -5,59 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Sirun Li</title>
-    <link rel="stylesheet" href="/src/styles/main.scss">
-    <script type="module" src="/src/js/page-loader.js"></script>
+    <link rel="stylesheet" href="./src/styles/main.scss">
+    <script type="module" src="./src/js/page-loader.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="paper.html">Publications</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container contact-container">
-        <article>
-            <h1 id="contact-title">
-                <span class="lang-en">Contact</span>
-                <span class="lang-zh" style="display:none;">联系方式</span>
-            </h1>
-            <hr id="contact-divider" />
-            <div id="contact-info">
-                <div class="column" id="location">
-                    <img class="icon" src="images/icon/Location.svg" alt="Location" />
-                    <span class="lang-en">Peking University, No.5 Yiheyuan Road, Haidian District, Beijing, P.R. China
-                        100871</span>
-                    <span class="lang-zh" style="display:none;">中国北京市海淀区颐和园路5号 北京大学 100871</span>
-                </div>
-                <div class="column" id="email">
-                    <img class="icon" src="images/icon/Email.svg" alt="Email" />
-                    <a href="mailto:inorganicwriter@gmail.com">inorganicwriter@gmail.com</a>
-                </div>
-                <div class="column" id="Github">
-                    <img class="icon" src="images/icon/Github.svg" alt="GitHub" />
-                    <a href="https://github.com/inorganicwriter" target="_blank">inorganicwriter</a>
-                </div>
-                <div class="column" id="Twitter">
-                    <img class="icon" src="images/icon/X.svg" alt="X" />
-                    <a href="https://x.com/inorganicwriter" target="_blank">@inorganicwriter</a>
-                </div>
-            </div>
-        </article>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Sirun Li. All rights reserved.</p>
-    </footer>
-
-    <script type="module" src="/src/js/main.js"></script>
+<body data-page="contact">
+    <header id="site-header"></header>
+    <main id="content" class="markdown-body"></main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>

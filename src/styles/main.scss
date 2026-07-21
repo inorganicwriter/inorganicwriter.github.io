@@ -31,80 +31,26 @@ a {
     }
 }
 
-// Main (Homepage hero)
+// Main content frame (shared by all pages; content injected from Markdown)
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
+    display: block;
+    width: 100%;
+    flex: 1 0 auto;
     max-width: $content-max-width;
     margin: 120px auto 80px auto;
     padding: 0 20px;
     font-family: $font-family-serif;
+}
 
-    .hero-section {
-        display: flex;
-        align-items: flex-start;
-        gap: 40px;
-        width: 100%;
-    }
-
-    .hero-avatar {
-        width: 180px;
-        min-width: 180px;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    .hero-info {
-        flex: 1;
-    }
-
-    h1 {
-        font-size: 32px;
-        margin-bottom: 8px;
-        color: $text-color-primary;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-        color: $text-color-secondary;
-        margin-bottom: 16px;
-        line-height: 1.5;
-    }
-
-    .hero-links {
-        font-size: 14px;
-        color: $text-color-secondary;
-
-        a {
-            margin-right: 16px;
-        }
-    }
-
-    p {
-        font-size: 16px;
-        margin-bottom: 20px;
-        color: $text-color-primary;
-        line-height: 1.7;
-    }
-
-    // Typewriter cursor
-    .typewriter-cursor {
-        display: inline-block;
-        width: 2px;
-        height: 1em;
-        background-color: $text-color-primary;
-        margin-left: 2px;
-        animation: cursorBlink 1s step-end infinite;
-        vertical-align: text-bottom;
-    }
+// Typewriter cursor
+.typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: $text-color-primary;
+    margin-left: 2px;
+    animation: cursorBlink 1s step-end infinite;
+    vertical-align: text-bottom;
 }
 
 @keyframes cursorBlink {
@@ -130,3 +76,4 @@ main {
 @import 'footer';
 @import 'animations';
 @import 'pages';
+@import 'markdown';

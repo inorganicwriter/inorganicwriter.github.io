@@ -1,0 +1,103 @@
+// ==================== Markdown Content Styles ====================
+
+.markdown-body {
+    font-family: $font-family-serif;
+    line-height: 1.7;
+    color: $text-color-primary;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $text-color-primary;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 24px 0 8px;
+        letter-spacing: -0.3px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 16px;
+        color: $text-color-primary;
+    }
+
+    ul,
+    ol {
+        padding-left: 20px;
+        margin-bottom: 16px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    li {
+        margin-bottom: 4px;
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+    }
+
+    strong {
+        color: $text-color-primary;
+    }
+
+    blockquote {
+        margin: 8px 0;
+        padding: 10px 16px;
+        border-left: 3px solid $accent-color;
+        background-color: $blockquote-bg;
+        border-radius: 0;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    code {
+        font-family: $font-family-mono;
+        background-color: $bg-color-alt;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-size: 0.9em;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid $border-color;
+        margin: 12px 0;
+    }
+
+    .markdown-error {
+        color: $accent-color;
+        font-size: 14px;
+    }
+
+    .content-loading {
+        padding: 40px 0;
+        color: $text-color-secondary;
+        font-size: 14px;
+        font-family: $font-family-sans;
+    }
+}
