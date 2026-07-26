@@ -10,12 +10,17 @@ export function initHeroTypewriter() {
     const home = document.querySelector('#content[data-layout="home"]');
     if (!home) return;
 
-    const nameEl = home.querySelector('h1');
-    const subtitleEl = home.querySelector('h1 + p + p');
+    const nameEl = home.querySelector('.hero-name') || home.querySelector('h1');
+    const subtitleEl = home.querySelector('.hero-bio');
     if (!nameEl || !subtitleEl) return;
 
     const nameText = nameEl.textContent;
     const subtitleText = subtitleEl.textContent.trim();
+
+    // Respect reduced motion: show full text immediately
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
 
     nameEl.textContent = '';
     subtitleEl.textContent = '';

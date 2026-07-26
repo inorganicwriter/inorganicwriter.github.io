@@ -1,0 +1,366 @@
+%
+% Academic CV LaTeX (Final Optimized Version for Sirun Li)
+%
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+
+% Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Font
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino
+
+\begin{document}
+\headerfontiii
+
+% ========== Header ==========
+\begin{center}
+    {\Huge\textbf{Sirun Li}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \href{mailto:sirun_li@stu.pku.edu.cn}{sirun\_li@stu.pku.edu.cn} \,|\, 
+    \href{https://scholar.google.com/citations?hl=zh-CN&user=bWZazE4AAAAJ}{Google Scholar} (Citations: \textbf{178}) \,|\, Beijing, China
+    }
+\end{center}
+
+\vspace{-4mm}
+
+% ========== Objective ==========
+\section{\textbf{Objective}}
+\vspace{1mm}
+\small{
+Undergraduate student focusing on \textbf{GeoAI} and \textbf{Urban Data Science}, 
+developing multimodal spatial intelligence systems and computational urban analytics methods that integrate geospatial technologies and artificial intelligence to address real-world urban challenges.
+}
+\vspace{-2mm}
+
+% ========== Education ==========
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Peking University}{Beijing, China}
+{B.S. in Geographic Information Science (GIS); B.A. in Economics (Double Degree)}{2023 -- Present}
+\resumeItemListStart
+\item \textbf{School of Earth and Space Science (GIS):} GPA: \textbf{3.49/4.0} $|$ Comprehensive Evaluation Rank: \textbf{1/15}
+\item \textbf{National School of Development:} Economics
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% ========== Publications ==========
+\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{C.2}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
+
+\item[\textbf{[C.1]}] Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shuyue Guo, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, \textbf{Sirun Li}, Yizhi Li, Yunwen Li, Dehua Ma, Yuansheng Ni, Haoran Que, Qiyao Wang, Zhoufutu Wen, Siwei Wu, Tianshun Xing, Zhenzhu Yang, Noah Wang, Junting Zhou, Xingyuan Bu, Liang Chen, Yifan Chen, Cheng Chengtuo, Tianhao Cheng, Keyi Ding, Siming Huang, HUANG YUN, Yaoru Li, Yizhe Li, Zhaoqun Li, Tianhao Liang, Chengdong Lin, Hongquan Lin, Yinghao Ma, Zhongyuan Peng, Zifan Peng, Qige Qi, Shi Qiu, Xingwei Qu, Shanghaoran Quan, Yizhou Tan, Zili Wang, Hao Wang, Yiya Wang, Yubo Wang, Jiajun Xu, Kexin Yang, Ruibin Yuan, Yuanhao Yue, Tianyang Zhan, Chun Zhang, Jinyang Zhang, Xiyue Zhang, Owen Zhang, Yue Zhang, Yongchi Zhao, Xiangyu Zheng, Yang Gao, Zhoujun Li, Dayiheng Liu, Qian Liu, Tianyu Liu, Shiwen Ni, Junran Peng, Yujia Qin, Wenbo Su, Guoyin Wang, Shi Wang, Jian Yang, Min Yang, Meng Cao, Xiang Yue, Zhaoxiang Zhang, Wangchunshu Zhou, Jiaheng Liu, Qunshu Lin, Wenhao Huang, Ge Zhang. (2025). \textbf{SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines}. In \textit{Advances in Neural Information Processing Systems (NeurIPS 2025)}, Vancouver, Canada. (Accepted). \href{https://arxiv.org/abs/2502.14739}{arXiv:2502.14739}
+
+\item[\textbf{[C.2]}] Yong Li, Weiyu Zhang, Ling Dai, Jian Yang, Dacheng Yin, \textbf{Sirun Li}, Jing Lyu, Fengyun Rao, Fan Zhang. (2026). \textbf{Unified Urban Tuning: Co-Enhancing Satellite and Street View Reasoning with a Progressive Tuning Framework}. \textit{CVPR 2026 Findings (Accepted)}.
+\end{enumerate}
+}
+
+% ========== Selected Research Projects ==========
+\section{\textbf{Selected Research Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {SIGNPOST-Bench: Benchmarking Text--Vision Conflict Resolution in MLLMs}
+  {First Author \& Project Lead (In preparation for AAAI 2027)}
+  {2025 -- Present}
+  {{}}
+\resumeItemListStart
+  \item Proposed a counterfactual benchmark that isolates text--vision conflict in multimodal reasoning, comprising 5,111 image groups and 25,000+ variants across four geo-localization datasets, with an automated pipeline for adversarial text generation and scene-coherent image editing.
+  \item Evaluated 20 MLLMs from seven providers and found that adversarial text increases median prediction error by 4.8$\times$; introduced the \textbf{Multimodal Conflict Robustness Score (MCRS)}, showing that conflict-resolution capability is orthogonal to clean-input accuracy and does not scale with model size.
+\resumeItemListEnd
+
+\resumeProject
+  {MACRO-City Engine}
+  {First Author (In preparation for \textit{Nature Cities})}
+  {2025 -- Present}
+  {{}}
+\resumeItemListStart
+  \item Investigating ``fragile booms'' by quantifying the temporal mismatch between rapid urban activity growth and slow infrastructure accumulation across 302 global cities, using a satellite-based stock-flow diagnostic built from 12 geospatial data sources and validated via COVID-19 as an exogenous shock.
+\resumeItemListEnd
+
+\resumeProject
+  {GLARE (Geolocation Leakage Attention \& Reasoning Engine)}
+  {Project Lead \& Core Researcher}
+  {2025 -- Present}
+  {{}}
+\resumeItemListStart
+  \item Designed an MLLM research framework that triangulates white-box cross-attention grounding, verbalized clue analysis, and human mouse-attention proxies to study geographic privacy leakage in street-view imagery.
+  \item Built an end-to-end pipeline for attention extraction, calibrated risk scoring, and bias analysis with statistical rigor (bootstrap CI, FDR correction, effect sizes), formulating four research questions covering internal--output alignment, model--human attention gap, predictive validity, and systematic bias.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% ========== Experience ==========
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {University College London (UCL)}{London, United Kingdom}
+  {Visiting Scholar, Centre for Advanced Spatial Analysis (CASA)}{Jul -- Sep 2026}
+  \resumeItemListStart
+    \item Collaborating with CASA on the \textbf{GLARE} project, advancing geographic privacy leakage analysis in street-view imagery using MLLM attention mechanisms.
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Beijing Key Laboratory of Space Information Integration \& 3S Engineering Application, PKU}{Beijing, China}
+  {Undergraduate Researcher}{2024 -- Present}
+  \resumeItemListStart
+    \item Focus on \textbf{Geo-AI}, \textbf{Urban Data Science}, and \textbf{Spatial Privacy}.
+    \item Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (\textit{CVPR 2026 Findings}).
+  \resumeItemListEnd
+
+\resumeSubheading
+  {ByteDance}{Beijing, China}
+  {Research Intern}{Summer 2024}
+  \resumeItemListStart
+    \item Core developer for the \textbf{SuperGPQA} benchmark (\textit{NeurIPS 2025}), contributing to dataset construction, expert annotation pipelines, and large-scale LLM evaluation across 285 graduate disciplines.
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Peking University}{Beijing, China}
+  {Teaching Assistant, "Introducing Geography"}{Spring 2026 -- Present}
+  \resumeItemListStart
+    \item Supporting course instruction, managing student Q\&A sessions, and facilitating academic activities for undergraduate students.
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Peking University iGEM 2024 Team}{Beijing, China}
+  {Core Member (Wiki \& Wet Lab)}{2024}
+  \resumeItemListStart
+    \item Contributed to the \textbf{iGEM 2024 Grand Jamboree Global Gold Medal} project.
+    \item Responsible for Wiki website architecture design, content writing, and frontend implementation. Participated in wet lab experiments and data recording.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+% ========== Leadership Experience ==========
+\section{\textbf{Leadership Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Linux Club of Peking University (LCPU)}{Peking University}
+  {President (previously Operations Director, Head of Finance \& Publicity)}{2025 -- Present}
+  \resumeItemListStart
+    \item Oversee strategic planning and overall club operations; spearheaded the \textbf{``Clab V2''} cloud computing platform project, managing frontend--backend integration and the full development lifecycle.
+  \resumeItemListEnd
+
+\resumeSubheading
+  {PKU GeekLab}{Peking University}
+  {Workshop Lead, Multi-Dimensional Fabrication}{2024 -- Present}
+  \resumeItemListStart
+    \item Direct the Multi-Dimensional Fabrication Workshop, designing and conducting technical training sessions for students in maker culture and rapid prototyping.
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Open Source Promotion Plan (OSPP)}{Peking University}
+  {LCPU Contact Person}{2025}
+  \resumeItemListStart
+    \item Served as the official liaison for OSPP at PKU, managing project planning and facilitating communication between participants and mentors.
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ========== Honors and Awards ==========
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {3rd PKU HPCGame (High-Performance Computing Comprehensive Ability Competition): Third Prize}
+  {Peking University}
+  {2026}
+  {{}}
+
+\resumeProject
+  {Peking University Merit Student}
+  {Peking University}
+  {2025}
+  {{}}
+
+\resumeProject
+  {Huanyu Scholarship}
+  {Peking University}
+  {2025}
+  {{}}
+
+\resumeProject
+  {GeekGame (``Jinghua Cup'' cybersecurity competition): Online Award of Excellence \& Offline Third Place}
+  {Co-hosted by Peking University \& Tsinghua University}
+  {2025}
+  {{}}
+
+\resumeProject
+  {22nd ``Jiang Zehan Cup'' Mathematical Modeling Competition: The Second Prize}
+  {School of Mathematics and Science, Peking University}
+  {2025}
+  {{}}
+
+\resumeProject
+  {Peking University Merit Student}
+  {Peking University}
+  {2024}
+  {{}}
+
+\resumeProject
+  {China National Petroleum Corporation (CNPC) Scholarship}
+  {Peking University}
+  {2024}
+  {{}}
+
+\resumeProject
+  {iGEM Grand Jamboree: Global Gold Medal}
+  {International Genetically Engineered Machine (iGEM) Foundation}
+  {2024}
+  {{}}
+
+\resumeProject
+  {3rd China Synbio Challenge: National Gold Medal}
+  {Synthetic Biology Branch of the Chinese Society of Biotechnology}
+  {2024}
+  {{}}
+
+\resumeSubHeadingListEnd
+
+% ========== Skills ==========
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages:}{Python, C++, JavaScript, SQL, \LaTeX}
+  \resumeSubItem{AI \& Machine Learning:}{PyTorch, GeoAI, Vision-Language Models, NLP, Computer Vision}
+  \resumeSubItem{GIS \& Spatial Analysis:}{ArcGIS, QGIS, Spatio-temporal Data Analysis, Remote Sensing}
+  \resumeSubItem{Development \& Ops:}{Full-stack Development, Git, Data Crawling, Linux, Docker}
+  \resumeSubItem{Other:}{Synthetic Biology (Wet Lab)}
+ \resumeHeadingSkillEnd
+
+\end{document}

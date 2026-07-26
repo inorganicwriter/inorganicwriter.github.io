@@ -1,48 +1,68 @@
-// Academic typewriter loading animation
+// Academic typewriter loading animation — a sheet of paper rises and types
+// the loading message, matching the page-transition aesthetic.
 (function () {
     'use strict';
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function createLoader() {
         if (document.getElementById('page-loader')) return;
 
-        const loader = document.createElement('div');
-        loader.id = 'page-loader';
+        const overlay = document.createElement('div');
+        overlay.id = 'page-loader';
+        overlay.className = 'typewriter-transition';
 
-        const textContainer = document.createElement('div');
-        textContainer.className = 'loader-text';
+        const sheet = document.createElement('div');
+        sheet.className = 'paper-sheet';
 
-        const textSpan = document.createElement('span');
-        textSpan.id = 'loader-typed-text';
-        textContainer.appendChild(textSpan);
+        const bar = document.createElement('div');
+        bar.className = 'paper-bar';
+
+        const bodyEl = document.createElement('div');
+        bodyEl.className = 'paper-body';
+
+        const line = document.createElement('span');
+        line.className = 'paper-typed-text';
 
         const cursor = document.createElement('span');
-        cursor.className = 'loader-cursor';
-        textContainer.appendChild(cursor);
+        cursor.className = 'paper-cursor';
 
-        loader.appendChild(textContainer);
+        bodyEl.appendChild(line);
+        bodyEl.appendChild(cursor);
+        sheet.appendChild(bar);
+        sheet.appendChild(bodyEl);
+        overlay.appendChild(sheet);
 
-        if (document.body) {
-            document.body.insertAdjacentElement('afterbegin', loader);
-        } else {
-            document.addEventListener('DOMContentLoaded', function () {
-                document.body.insertAdjacentElement('afterbegin', loader);
-            });
+        const mount = document.body || document.documentElement;
+        mount.appendChild(overlay);
+
+        requestAnimationFrame(() => {
+            overlay.classList.add('active');
+            sheet.classList.add('active');
+        });
+
+        const fullText = '> loading inorganicwriter.github.io';
+
+        if (prefersReducedMotion) {
+            line.textContent = fullText;
+            return;
         }
 
-        // Typewriter effect
-        const fullText = '> loading inorganicwriter.github.io';
         let charIndex = 0;
         const typingSpeed = 40;
 
         function typeChar() {
             if (charIndex < fullText.length) {
-                textSpan.textContent += fullText.charAt(charIndex);
+                const span = document.createElement('span');
+                span.className = 'paper-char';
+                span.textContent = fullText.charAt(charIndex);
+                line.appendChild(span);
                 charIndex++;
                 setTimeout(typeChar, typingSpeed);
             }
         }
 
-        setTimeout(typeChar, 200);
+        setTimeout(typeChar, 440);
     }
 
     function hideLoader() {
@@ -50,6 +70,7 @@
         if (loader) {
             setTimeout(() => {
                 loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.4s ease';
                 setTimeout(() => {
                     loader.style.display = 'none';
                     loader.remove();
@@ -66,6 +87,23 @@
     }
 
     function init() {
+        if (prefersReducedMotion) {
+            fixScrollPosition();
+            return;
+        }
+
+        // Skip the loader if we just arrived via a typewriter transition —
+        // the transition overlay already provided the visual handoff, and
+        // this module executes after prerendered content is already visible.
+        try {
+            const ts = sessionStorage.getItem('tw-transition');
+            if (ts && Date.now() - parseInt(ts, 10) < 5000) {
+                sessionStorage.removeItem('tw-transition');
+                fixScrollPosition();
+                return;
+            }
+        } catch (e) {}
+
         createLoader();
 
         if (document.readyState === 'loading') {

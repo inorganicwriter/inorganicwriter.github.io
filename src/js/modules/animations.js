@@ -1,4 +1,8 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 export function initScrollAnimations() {
+    if (prefersReducedMotion) return;
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -30px 0px'
@@ -18,20 +22,5 @@ export function initScrollAnimations() {
         el.style.opacity = '0';
         el.style.transform = 'translateY(16px)';
         observer.observe(el);
-    });
-}
-
-export function initPageTransitions() {
-    document.querySelectorAll('a:not([target="_blank"])').forEach(link => {
-        link.addEventListener('click', function (e) {
-            if (this.hostname === window.location.hostname && !this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                document.body.style.opacity = '0';
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 200);
-            }
-        });
     });
 }

@@ -1,4 +1,10 @@
 @use 'variables' as *;
+@use 'header';
+@use 'footer';
+@use 'animations';
+@use 'pages';
+@use 'markdown';
+@use 'transition';
 
 // Global Reset
 * {
@@ -67,13 +73,6 @@ main {
 
 // Selection
 ::selection {
-    background-color: rgba(139, 0, 0, 0.15);
+    background-color: rgba($accent-color, 0.15);
     color: $text-color-primary;
 }
-
-// Imports
-@import 'header';
-@import 'footer';
-@import 'animations';
-@import 'pages';
-@import 'markdown';

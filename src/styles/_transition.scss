@@ -1,0 +1,166 @@
+@use 'variables' as *;
+
+/* ==================== Typewriter Paper Transition ==================== */
+
+.typewriter-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.2s ease;
+    pointer-events: none;
+
+    &.active,
+    &.solid {
+        pointer-events: auto;
+    }
+
+    &.active {
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    &.solid {
+        background: $bg-color;
+    }
+}
+
+/* Paper sheet — drops from the top, as if fed through the platen roller */
+.paper-sheet {
+    width: 90%;
+    max-width: 460px;
+    background: $bg-color-alt;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 10px 36px rgba(0, 0, 0, 0.14);
+    position: relative;
+    transform: translateY(-110vh);
+    opacity: 0;
+    transition:
+        transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.2s ease;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &.exit {
+        transform: translateY(-110vh);
+        opacity: 0;
+        transition:
+            transform 0.3s cubic-bezier(0.4, 0, 1, 1),
+            opacity 0.18s ease;
+    }
+}
+
+/* Platen bar — the dark roller at the top of the paper */
+.paper-bar {
+    height: 8px;
+    background: linear-gradient(to bottom, #2a2a2a, $text-color-primary);
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        width: 3px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    &::before {
+        left: 30%;
+    }
+
+    &::after {
+        right: 30%;
+    }
+}
+
+/* Paper body — where the text is typed */
+.paper-body {
+    padding: 28px 32px 36px;
+    font-family: $font-family-mono;
+    font-size: 15px;
+    color: $text-color-primary;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+    min-height: 100px;
+    border-top: 1px solid rgba($accent-color, 0.12);
+}
+
+/* Each typed character strikes onto the paper like a typeball hammer */
+.paper-char {
+    display: inline-block;
+    white-space: pre;
+    animation: keyStrike 0.15s ease-out;
+}
+
+@keyframes keyStrike {
+    0% {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cursor — ribbon red */
+.paper-cursor {
+    display: inline-block;
+    width: 9px;
+    height: 16px;
+    background-color: $accent-color;
+    margin-left: 1px;
+    vertical-align: text-bottom;
+    animation: paperBlink 0.8s step-end infinite;
+}
+
+@keyframes paperBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .paper-sheet {
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .paper-cursor,
+    .paper-char {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .paper-sheet {
+        max-width: 92%;
+    }
+
+    .paper-body {
+        padding: 22px 24px 28px;
+        font-size: 14px;
+    }
+}

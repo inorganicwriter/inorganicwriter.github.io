@@ -1,23 +1,38 @@
 import { renderLayout } from './modules/layout.js';
-import { initScrollAnimations, initPageTransitions } from './modules/animations.js';
+import { initScrollAnimations } from './modules/animations.js';
 import { initSmoothScroll, initNavbarEffects, initMobileMenu, createBackToTop } from './modules/navigation.js';
 import { initHeroTypewriter, initNavUnderlines } from './modules/text-effects.js';
 import { loadContent } from './modules/markdown-loader.js';
+import { initTypewriterTransition } from './modules/transition.js';
 
 const page = document.body.dataset.page || 'home';
 
-// Effects that depend on the rendered Markdown content. Re-run on every
-// (re)render so language switches animate the freshly injected DOM.
+// Effects that depend on the rendered Markdown content. Run after content
+// is injected so they target the freshly rendered DOM.
 function applyPageEffects() {
     if (page === 'home') initHeroTypewriter();
-    initScrollAnimations();
+
+    // Skip scroll-in animations when arriving via a typewriter transition —
+    // prerendered content is already visible and re-hiding it causes a flash.
+    let viaTransition = false;
+    try {
+        const ts = sessionStorage.getItem('tw-transition');
+        if (ts && Date.now() - parseInt(ts, 10) < 5000) {
+            viaTransition = true;
+            sessionStorage.removeItem('tw-transition');
+        }
+    } catch (e) {}
+
+    if (!viaTransition) initScrollAnimations();
 }
 
 async function renderPage() {
     const container = document.getElementById('content');
     if (!container) return;
 
-    container.innerHTML = '<div class="content-loading">Loading…</div>';
+    if (container.dataset.prerendered !== 'true') {
+        container.innerHTML = '<div class="content-loading">Loading…</div>';
+    }
     try {
         const meta = await loadContent(container, page);
         if (meta && meta.title) document.title = meta.title;
@@ -29,13 +44,6 @@ async function renderPage() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Page fade in
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.4s ease-in';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 50);
-
     // Render shared chrome (nav + footer), then wire architecture behaviour
     renderLayout();
     initSmoothScroll();
@@ -45,5 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavUnderlines();
 
     // Load the page content, then wire page transitions
-    renderPage().then(() => initPageTransitions());
+    renderPage().then(() => initTypewriterTransition());
 });

@@ -2,3 +2,6 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# CV PDF is compiled from cv.tex by GitHub Actions
+public/cv/cv.pdf
