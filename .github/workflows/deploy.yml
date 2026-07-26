@@ -33,17 +33,17 @@ jobs:
       - name: Compile CV (LaTeX → PDF)
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: public/cv/cv.tex
+          root_file: cv.tex
           working_directory: public/cv
 
       - name: Verify CV PDF
-        run: ls -la public/cv/cv.pdf && echo "PDF exists" || echo "PDF MISSING"
+        run: ls -la public/cv/cv.pdf
 
       - name: Build
         run: npm run build
 
       - name: Verify dist
-        run: ls -la dist/cv/cv.pdf && echo "PDF in dist" || echo "PDF NOT in dist"
+        run: ls -la dist/cv/cv.pdf
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
