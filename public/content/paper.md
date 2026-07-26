@@ -11,7 +11,7 @@ layout: papers
 
 *NeurIPS 2025 · Machine Learning · NLP*
 
-Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shuyue Guo, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, **Sirun Li**, Yizhi Li, *et al.* Contributed as a domain expert in the construction of the dataset and benchmark.
+Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shuyue Guo, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, **Sirun Li**, *et al.*
 
 [arXiv](https://arxiv.org/abs/2502.14739) · [PDF](https://arxiv.org/pdf/2502.14739)
 
