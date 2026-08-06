@@ -17,6 +17,7 @@ Undergraduate student at Peking University, majoring in Geographic Information S
 
 ## News
 
+- **2026.08** — First-author paper released on arXiv: "SIGNPOST-Bench: Benchmarking Text-Vision Conflict Resolution in MLLMs"
 - **2026.03** — Paper accepted at CVPR 2026 Findings: "Unified Urban Tuning"
 - **2025** — Paper accepted at NeurIPS 2025: "SuperGPQA"
 - **2024** — iGEM Grand Jamboree: Global Gold Medal

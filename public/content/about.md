@@ -37,7 +37,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **Beijing Key Laboratory of Space Information Integration & 3S Engineering Application, PKU** | **Undergraduate Researcher** (2024 – Present)
 >
-> Focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings).
+> Focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)).
 
 ---
 

@@ -7,13 +7,13 @@ layout: papers
 
 ---
 
-### SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines
+### SIGNPOST-Bench: Benchmarking Text-Vision Conflict Resolution in Multimodal Large Language Models
 
-*NeurIPS 2025 · Machine Learning · NLP*
+*arXiv 2608.04244 · Computer Vision · MLLM · Submitted to AAAI 2027*
 
-Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shuyue Guo, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, **Sirun Li**, *et al.*
+Sirun Li, Minghao Liu, Ling Dai, Yong Li, Haoxin Lyu, Junting Zhou, Fan Zhang.
 
-[arXiv](https://arxiv.org/abs/2502.14739) · [PDF](https://arxiv.org/pdf/2502.14739)
+[arXiv](https://arxiv.org/abs/2608.04244) · [Code](https://github.com/inorganicwriter/SIGNPOST-Bench) · [Dataset](https://huggingface.co/datasets/inorganicwriter/SIGNPOST-Bench)
 
 ### Unified Urban Tuning: Co-Enhancing Satellite and Street View Reasoning with a Progressive Tuning Framework
 
@@ -22,6 +22,14 @@ Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao L
 Yong Li, Weiyu Zhang, Ling Dai, Jian Yang, Dacheng Yin, **Sirun Li**, Jing LYU, Fengyun Rao, Fan Zhang.
 
 [OpenReview](https://openreview.net/forum?id=yXOt8zXthf)
+
+### SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines
+
+*NeurIPS 2025 · Machine Learning · NLP*
+
+Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shuyue Guo, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, **Sirun Li**, *et al.*
+
+[arXiv](https://arxiv.org/abs/2502.14739) · [PDF](https://arxiv.org/pdf/2502.14739)
 
 ### Peking iGEM 2024: GPA Project Wiki
 
