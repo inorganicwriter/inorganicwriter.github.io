@@ -43,7 +43,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **Open Source Contribution — google-research/flood-forecasting (Google FloodHub)** | **Merged PR #263** (Jun – Aug 2026)
 >
-> Fixed state_dict key mismatch when loading checkpoints trained with torch.compile into non-compiled models, enabling transparent weight reuse across compiled/non-compiled training and inference. [PR #263](https://github.com/google-research/flood-forecasting/pull/263)
+> Fixed checkpoint loading for models trained with torch.compile, merged upstream as [PR #263](https://github.com/google-research/flood-forecasting/pull/263).
 
 ---
 
