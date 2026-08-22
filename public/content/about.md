@@ -95,6 +95,10 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
+> **2026** — 23rd "Jiang Zehan Cup" Mathematical Modeling Competition – Third Prize
+
+---
+
 > **2025** — GeekGame ("Jinghua Cup" Information Security Comprehensive Ability Competition) – Online Award of Excellence & Offline Third Place
 
 ---
