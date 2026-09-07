@@ -6,5 +6,8 @@ dist
 # CV PDF is compiled from cv.tex by GitHub Actions
 public/cv/cv.pdf
 
-# Local PhD application strategy file (private)
+# Local PhD application strategy files (private)
 PHD_APPLICATION.md
+ADVISOR_CANDIDATES.md
+PKU_STATEMENT_2027.md
+*.pdf
