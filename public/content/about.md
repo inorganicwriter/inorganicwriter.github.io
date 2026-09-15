@@ -31,19 +31,21 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **University College London (UCL)** | **Visiting Scholar** (Jul – Sep 2026)
 >
-> Conducting a two-month visiting scholarship at University College London (UCL), from July to September 2026.
+> Conducted research under the supervision of Prof. Huanfa Chen on **GLARE**, and collaborated with Prof. Michael Batty on the **MACRO-City Engine**.
 
 ---
 
 > **Beijing Key Laboratory of Space Information Integration & 3S Engineering Application, PKU** | **Undergraduate Researcher** (2024 – Present)
 >
-> Focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)).
+> Under the supervision of Prof. Fan Zhang, focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)).
+
+> Since Summer 2026, developing an urban causal representation-learning framework under the supervision of Prof. Yunhan Zheng.
 
 ---
 
-> **Open Source Contribution — google-research/flood-forecasting (Google FloodHub)** | **Merged PR #263** (Jun – Aug 2026)
+> **Open-Source Contributor, Google FloodHub** | **Merged PR #263** (Jun – Aug 2026)
 >
-> Fixed checkpoint loading for models trained with torch.compile, merged upstream as [PR #263](https://github.com/google-research/flood-forecasting/pull/263).
+> Contributed to Google FloodHub's open-source flood forecasting framework; contribution merged upstream as [PR #263](https://github.com/google-research/flood-forecasting/pull/263).
 
 ---
 
@@ -59,9 +61,15 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **Peking University** | **Teaching Assistant, Introducing Geography**
+> **Peking University** | **Teaching Assistant, Introduction to Computation (B)** (Fall 2026 – Present)
 >
-> Serving as a Teaching Assistant (TA) for the course "Introducing Geography" at Peking University, supporting course instruction, student Q&A, and academic activities.
+> Supporting course instruction and student Q&A for undergraduate students.
+
+---
+
+> **Peking University** | **Teaching Assistant, Introducing Geography** (Spring 2026)
+>
+> Supported course instruction and student Q&A for undergraduate students.
 
 ---
 

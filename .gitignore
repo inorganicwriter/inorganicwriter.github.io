@@ -9,5 +9,12 @@ public/cv/cv.pdf
 # Local PhD application strategy files (private)
 PHD_APPLICATION.md
 ADVISOR_CANDIDATES.md
+ADVISOR_WORKSPACE.md
 PKU_STATEMENT_2027.md
+WES_GPA_CALCULATION.md
 *.pdf
+
+# Local presentation builds and validation artifacts
+.codex-finalizer/
+presentation_build_*/
+presentation_output_*/
