@@ -43,9 +43,9 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **Open-Source Contributor, Google FloodHub** | **Merged PR #263** (Jun – Aug 2026)
+> **Open-Source Contributor, Google FloodHub** (Jun – Aug 2026)
 >
-> Contributed to Google FloodHub's open-source flood forecasting framework; contribution merged upstream as [PR #263](https://github.com/google-research/flood-forecasting/pull/263).
+> Contributed to Google FloodHub, Google's open-source flood forecasting framework.
 
 ---
 
