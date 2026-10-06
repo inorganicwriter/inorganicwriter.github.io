@@ -37,7 +37,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **MIT-UF-NEU 2026 Joint Summer Research Camp** | **Mentee** (Summer 2026)
 >
-> Selected as a mentee in a three-month online research camp organized by MIT, the University of Florida, and Northeastern University (Prof. Jinhua Zhao, Prof. Cathy Wu, Prof. Shenhao Wang, Prof. Haris Koutsopoulos). Conducted research with mentor Prof. Yunhan Zheng on causal representation learning for urban systems.
+> Selected as a mentee in a three-month online research camp organized by MIT, the University of Florida, and Northeastern University (Prof. Jinhua Zhao, Prof. Cathy Wu, Prof. Shenhao Wang, Prof. Haris Koutsopoulos), mentored by Prof. Yunhan Zheng.
 
 ---
 
