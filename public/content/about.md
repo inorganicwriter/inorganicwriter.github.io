@@ -55,7 +55,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **ByteDance** | **Research Intern** (Summer 2024)
+> **ByteDance** | **LLM Algorithm Intern** (Summer 2024)
 >
 > Core developer for the SuperGPQA benchmark (NeurIPS 2025), focusing on LLM evaluation and automation pipelines.
 
