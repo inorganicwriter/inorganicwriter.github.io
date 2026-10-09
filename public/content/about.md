@@ -29,7 +29,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **University College London (UCL)** | **Visiting Scholar** (Jul – Sep 2026)
+> **University College London (UCL)** | **Visiting Student** (Jul – Sep 2026)
 >
 > Conducted research under the joint supervision of Prof. Huanfa Chen and Prof. Michael Batty, developing the **MACRO-City Engine**.
 
