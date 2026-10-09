@@ -31,7 +31,7 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **University College London (UCL)** | **Visiting Scholar** (Jul – Sep 2026)
 >
-> Conducted research under the supervision of Prof. Huanfa Chen on **GLARE**, and collaborated with Prof. Michael Batty on the **MACRO-City Engine**.
+> Conducted research under the joint supervision of Prof. Huanfa Chen and Prof. Michael Batty, developing the **MACRO-City Engine**.
 
 ---
 
@@ -41,9 +41,9 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **Beijing Key Laboratory of Space Information Integration & 3S Engineering Application, PKU** | **Undergraduate Researcher** (2024 – Present)
+> **Beijing Key Laboratory of Spatio-temporal Perception and Urban Resilience, PKU** | **Research Assistant** (2024 – Present)
 >
-> Under the supervision of Prof. Fan Zhang, focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)).
+> Under the supervision of Prof. Fan Zhang, focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)). Project lead of GLARE, an MLLM framework for geographic privacy leakage in street-view imagery, co-supervised by Prof. Fan Zhang and Prof. Huanfa Chen.
 
 > Since Summer 2026, developing an urban causal representation-learning framework under the supervision of Prof. Yunhan Zheng.
 
