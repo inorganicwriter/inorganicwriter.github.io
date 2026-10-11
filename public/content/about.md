@@ -37,15 +37,13 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 > **MIT-UF-NEU 2026 Joint Summer Research Camp** | **Mentee** (Summer 2026)
 >
-> Selected as a mentee in a three-month online research camp organized by MIT, the University of Florida, and Northeastern University (Prof. Jinhua Zhao, Prof. Cathy Wu, Prof. Shenhao Wang, Prof. Haris Koutsopoulos), mentored by Prof. Yunhan Zheng.
+> Selected as a mentee in a three-month online research camp organized by MIT, the University of Florida, and Northeastern University (Prof. Jinhua Zhao, Prof. Cathy Wu, Prof. Shenhao Wang, Prof. Haris Koutsopoulos). Mentored by Prof. Yunhan Zheng, developing an urban causal representation-learning framework for urban systems.
 
 ---
 
 > **Beijing Key Laboratory of Spatio-temporal Perception and Urban Resilience, PKU** | **Research Assistant** (2024 – Present)
 >
 > Under the supervision of Prof. Fan Zhang, focus on Geo-AI, Urban Data Science, and Spatial Privacy. Developed a progressive tuning framework that jointly enhances satellite and street view reasoning for urban understanding (CVPR 2026 Findings). First author of SIGNPOST-Bench, a benchmark for text-vision conflict resolution in MLLMs ([arXiv:2608.04244](https://arxiv.org/abs/2608.04244)). Project lead of GLARE, an MLLM framework for geographic privacy leakage in street-view imagery, co-supervised by Prof. Fan Zhang and Prof. Huanfa Chen.
-
-> Since Summer 2026, developing an urban causal representation-learning framework under the supervision of Prof. Yunhan Zheng.
 
 ---
 
@@ -61,9 +59,9 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
-> **LCPU** | **ChairPerson**
+> **LCPU** | **Chair of the Board**
 >
-> Serving as the President of the Linux Club of Peking University (LCPU). Previously held concurrent roles as Head of Finance, Head of Publicity, Director of the Operations Department, and Leader of the Clab V2 Project Coordination Group.
+> Serving as the Chair of the Board of the Linux Club of Peking University (LCPU). Previously held concurrent roles as Head of Finance, Head of Publicity, Director of the Operations Department, and Leader of the Clab V2 Project Coordination Group.
 
 ---
 

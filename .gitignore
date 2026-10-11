@@ -12,6 +12,7 @@ ADVISORS.md
 PROGRAMS.md
 PKU_STATEMENT_2027.md
 *.pdf
+cv_private/
 
 # Local presentation builds and validation artifacts
 .codex-finalizer/
