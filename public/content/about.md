@@ -59,6 +59,12 @@ Interests: Cooking, Roguelike games, modern music, mechanical models.
 
 ---
 
+> **SuperCoder** | **Creator & System Architect** (2026 – Present)
+>
+> Architected and developed [SuperCoder](https://github.com/inorganicwriter/SuperCoder), an open-source desktop application for orchestrating local coding agents. Connects to agents installed on the local machine to dispatch development tasks, featuring workspace exclusive write locks, session continuation, one-click Git rollbacks, and an event-sourced append-only storage engine (`log.jsonl`) with crash recovery.
+
+---
+
 > **LCPU** | **Chair of the Board**
 >
 > Serving as the Chair of the Board of the Linux Club of Peking University (LCPU). Previously held concurrent roles as Head of Finance, Head of Publicity, Director of the Operations Department, and Leader of the Clab V2 Project Coordination Group.
